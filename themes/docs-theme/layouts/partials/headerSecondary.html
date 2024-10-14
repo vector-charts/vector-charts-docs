@@ -1,0 +1,63 @@
+<div id="headerSecondary">
+    {{ $currentPage := . }}
+    {{ $menu := .Site.Menus.server }}
+    {{ $menuName := "home" }}
+    {{ if eq $currentPage.Section "server" }}
+        {{ $menu = .Site.Menus.server}}
+        {{ $menuName = "server" }}
+    {{end}}
+    {{ if eq $currentPage.Section "cli" }}
+        {{ $menu = .Site.Menus.cli}}
+        {{ $menuName = "cli" }}
+    {{end}}
+    {{ if eq $currentPage.Section "arduino_sdk" }}
+        {{ $menu = .Site.Menus.arduino_sdk}}
+        {{ $menuName = "arduino_sdk" }}
+    {{end}}
+    <section class="noJsHidden">
+        <div class="mobileHeaderFlexContainer">
+            <div class="bp3-select bp3-minimal mobileSidebarNavDropdown">
+                <select onchange="window.location.replace(this.options[this.selectedIndex].value)">
+                    <option value="/">Go to section...</option>
+                    {{ range .Site.Menus.root }}
+                        <option value="{{ .URL }}" {{ if eq .Page.Section $currentPage.Section }}selected{{end}}>{{.Title}}</option>
+                    {{ end }}
+                </select>
+            </div>
+            <div class="secondaryHeaderSectionDivider"></div>
+            <div class="bp3-select bp3-minimal mobileSidebarNavDropdown">
+                <select onchange="window.location.replace(this.options[this.selectedIndex].value)">
+                    <option value="/">Go to page...</option>
+                    {{ range $menu }}
+                        {{ if .HasChildren }}
+                        <optgroup label="{{ .Title }}">
+                            {{ range .Children }}
+                                <option value="{{ .URL }}" {{ if eq .URL $currentPage.URL }}selected{{end}}>{{ .Title }}</option>
+                                {{if  .HasChildren }}
+                                    {{ range .Children }}
+                                        <option value="{{ .URL }}" {{ if eq .URL $currentPage.URL }}selected{{end}}>&nbsp;&nbsp;&nbsp;{{ .Title }}</option>
+                                    {{ end }}
+                                {{ end }}
+                            {{ end }}
+                        </optgroup>
+                        {{ end }}
+                    {{ end }}
+                </select>
+            </div>
+        </div>
+    </section>
+    <noscript>
+        <section id="headerSecondaryNoscriptPath">
+            {{ if eq $menuName "server" }}
+            <a href="/server/">Server</a>&nbsp;<span class="bp3-icon bp3-icon-chevron-right"></span>&nbsp;
+            {{ end }}
+            {{ if eq $menuName "cli" }}
+            <a href="/cli/">CLI</a>&nbsp;<span class="bp3-icon bp3-icon-chevron-right"></span>&nbsp;
+            {{ end }}
+            {{ if eq $menuName "arduino_sdk" }}
+            <a href="/arduino_sdk/">Arduino SDK</a>&nbsp;<span class="bp3-icon bp3-icon-chevron-right"></span>&nbsp;
+            {{ end }}
+            <a href="{{ .URL }}">{{ $currentPage.Title }}</a>
+        </section>
+    </noscript>
+</div>
