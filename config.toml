@@ -12,7 +12,6 @@ unsafe = true
     siteUrl = "http://localhost:1313"
     docsUrl = "http://localhost:1313"
     filesUrl = "http://localhost:1313"
-    analyticsId = ""
 
 [menu]
     [[menu.home]]

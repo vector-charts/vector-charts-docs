@@ -4,19 +4,75 @@
 }
 
 #menu {
-    background-color: #293742;
+    background-color: white;
 }
 
 #header {
-    background-color: #293742;
-    color: white;
+    background-color: white;
+    color: black;
+    background: url(/img/contour-black.svg), linear-gradient(357deg, rgb(235 235 235) 0%, rgb(244 244 244) 100%);
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 10;
 }
+
+#header h1 {
+    font-weight: 600;
+}
+#header h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+#header-inner {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    z-index: 2000;
+}
+
+#header-inner a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.header-link {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+
+}
+
+.header-link img {
+    opacity: 1.0;
+}
+
+#header-inner h1 {
+    margin-left: 10px;
+    font-size: 30px;
+    font-variant: small-caps;
+    font-stretch: semi-condensed;
+    text-transform: uppercase;
+}
+
 #headerNavBar {
-    background-color: #293742;
-    color: white;
+    background-color: white;
+    color: black;
 }
 #navbarLogoIcon {
-    color: white;
+    color: black;
 }
 
 .headerMenuUseCasesViewAll {
@@ -289,4 +345,33 @@ img.menuSocialIcon {
 #headerAlert a {
     color: #bfccd6;
     text-decoration: underline;
+}
+
+
+#header {
+}
+
+#headerSecondary {
+    background-color: white;
+    color: #10161a;
+    border-top: 1px solid #bfccd6;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    min-height: 32px;
+    max-height: 32px;
+}
+#headerSecondary a {
+    color: #10161a;
+}
+#headerSecondaryNoscriptPath {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+#headerSecondary select {
+    border-radius: 0px;
+    font-size: 13px;
 }

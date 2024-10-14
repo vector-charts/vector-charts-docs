@@ -12,8 +12,11 @@
     position: relative;
     flex: 0 0 auto;
     color: #738694;
-    background-color: #CED9E0;
-    font-family: monospace;
+    background-color: rgba(0,0,0,0.03);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+
 }
 
 .secondaryFooterContent span {
@@ -23,37 +26,11 @@
 
 #secondaryFooter a {
     color: #738694;
+    text-decoration: underline;
 }
 
 .footerMoreLink {
     color: #738694 !important;
-}
-
-#backToTop {
-    display: none;
-    position: absolute;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 100%;
-    top: 0px;
-    right: 0px;
-    float: right;
-    cursor: pointer;
-    color: #738694;
-    background-color: #CED9E0;
-    background-position: center center;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-}
-
-#backToTop:hover {
-    color: #394B59;
-    background-color: #BFCCD6;
-}
-
-#backToTop span {
-    margin-right: 5px;
 }
 
 .primaryFooterContent {
