@@ -1,20 +1,8 @@
 <div id="contentLeftSidebar">
     <div class="stickyTableOfContents">
 		{{ $currentPage := . }}
-		{{ $menu := .Site.Menus.home }}
-		{{ $menuName := "home" }}
-		{{ if eq $currentPage.Section "server" }}
-			{{ $menu = .Site.Menus.server}}
-			{{ $menuName = "server" }}
-		{{end}}
-		{{ if eq $currentPage.Section "cli" }}
-			{{ $menu = .Site.Menus.cli}}
-			{{ $menuName = "cli" }}
-		{{end}}
-		{{ if eq $currentPage.Section "arduino_sdk" }}
-			{{ $menu = .Site.Menus.arduino_sdk}}
-			{{ $menuName = "arduino_sdk" }}
-		{{end}}
+		{{ $menu := .Site.Menus.main }}
+		{{ $menuName := "main" }}
 
 		{{ range $menu }}
 			{{ if .HasChildren }}
