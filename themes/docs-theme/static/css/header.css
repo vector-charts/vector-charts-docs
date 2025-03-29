@@ -10,7 +10,7 @@
 #header {
     background-color: white;
     color: black;
-    background: url(/img/contour-black.svg), linear-gradient(357deg, rgb(235 235 235) 0%, rgb(244 244 244) 100%);
+    background: url(/img/contour-v2.svg), linear-gradient(357deg, rgb(235 235 235) 0%, rgb(244 244 244) 100%);
     width: 100%;
     display: block;
     position: relative;
