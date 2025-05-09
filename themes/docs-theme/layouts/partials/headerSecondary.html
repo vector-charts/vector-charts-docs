@@ -13,10 +13,10 @@
                         {{ if .HasChildren }}
                         <optgroup label="{{ .Title }}">
                             {{ range .Children }}
-                                <option value="{{ .URL }}" {{ if eq .URL $currentPage.URL }}selected{{end}}>{{ .Title }}</option>
+                                <option value="{{ .URL }}" {{ if eq .URL $currentPage.RelPermalink }}selected{{end}}>{{ .Title }}</option>
                                 {{if  .HasChildren }}
                                     {{ range .Children }}
-                                        <option value="{{ .URL }}" {{ if eq .URL $currentPage.URL }}selected{{end}}>&nbsp;&nbsp;&nbsp;{{ .Title }}</option>
+                                        <option value="{{ .URL }}" {{ if eq .URL $currentPage.RelPermalink }}selected{{end}}>&nbsp;&nbsp;&nbsp;{{ .Title }}</option>
                                     {{ end }}
                                 {{ end }}
                             {{ end }}
@@ -35,7 +35,7 @@
             {{ if eq $menuName "cli" }}
             <a href="/cli/">CLI</a>&nbsp;<span class="bp3-icon bp3-icon-chevron-right"></span>&nbsp;
             {{ end }}
-            <a href="{{ .URL }}">{{ $currentPage.Title }}</a>
+            <a href="{{ .RelPermalink }}">{{ $currentPage.Title }}</a>
         </section>
     </noscript>
 </div>
