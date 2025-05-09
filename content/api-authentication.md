@@ -7,20 +7,26 @@ menu:
     identifier: "api_reference_authentication"
 ---
 
-## Overview 
-The REST API uses the OpenID specification to manage authentication. Each request must be sent with an `Authorization` header, containing an access token.
+The API uses tokens to manage authentication and track usage for billing. Each API request must be sent with an API token, and there are several methods to do so.
 
-## Requesting a Token
-To request a token, make a request to the access token endpoint with your credentials:
+See the [API Tokens](/tokens) section for a step-by-step guide to create a new token. 
 
-You will receive a token string.
+## Header Authentication
 
-## Authenticating Requests
-All requests to the API should include the access token from the previous step in a header:
+API requests can be authenticated with an `Authorization` header:
 
 <pre>
 Authorization: Bearer &lt;token string&gt;
 </pre>
 
-## Token Renewal
-Access tokens currently cannot be renewed, and last 24 hours. When your token expires, you will need to request a new token.
+## Query Parameter Authentication
+
+Mapping libraries do not usually allow you to directly set request headers for a style. In this case, add the token as a request parameter: `?token=<token string>`.
+
+For example, in Mapbox GL JS:
+<pre>
+const map = new mapboxgl.Map({
+    ...
+    style: "https://api.vectorcharts.com/api/v1/styles/base.json?token=&lt;token string&gt;"
+});
+</pre>

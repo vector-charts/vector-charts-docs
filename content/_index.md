@@ -7,21 +7,17 @@ menu:
     parent: "getting_started"
 ---
 
-Welcome! 
+The Vector Charts API provides Nautical Charts as tiles for display in web maps. 
 
-VectorCharts is a web API for rendering Nautical Charts in web applications. 
+## Quick Start Guide
 
-Vector Charts uses Mapbox Vector Tiles technology to render beautiful, high resolution nautical chart data.
+### 1. Create an Account
 
-To get started, follow these links or the quickstart guide:
-
-## 1. Create an Account
-
-## 2. Create a Token
+### 2. Create a Token
 
 Create a token in your dashboard.
 
-## 3. Add VectorCharts to your App
+### 3. Add VectorCharts to your App
 
 Use the vector URL in your client:
 
