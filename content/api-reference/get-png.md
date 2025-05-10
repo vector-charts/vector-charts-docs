@@ -1,6 +1,6 @@
 ---
 title: "Get Style (PNG)"
-weight: 1
+weight: 3
 menu:
   main:
     parent: "tile_api"

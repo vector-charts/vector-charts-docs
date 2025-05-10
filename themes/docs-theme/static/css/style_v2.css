@@ -328,11 +328,25 @@ code {
     white-space: pre-wrap;
 }
 
+.apiCardContent pre.light {
+    border: none;
+    box-shadow: none;
+    background-color: #dbe2e7;
+    color: #202b33;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+    margin-top: 20px;
+    border-radius: 0px;
+    padding-left: 20px;
+    white-space: pre-wrap;
+}
+
 .flexSpacer {
     flex: 1;
 }
 
-img {
+#contentContainer img {
     display: block;
     margin: 0 0 1rem;
     border-radius: 5px;

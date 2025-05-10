@@ -9,7 +9,7 @@ menu:
 
 The API uses tokens to manage authentication and track usage for billing. Each API request must be sent with an API token, and there are several methods to do so.
 
-See the [API Tokens](/tokens) section for a step-by-step guide to create a new token. 
+See the [API Tokens](/getting-started/tokens/) section for a step-by-step guide to create a new token. 
 
 ## Header Authentication
 
