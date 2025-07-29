@@ -20,6 +20,20 @@ The style returned using the [Get Vector Style](/api-reference/get-mvt/) endpoin
 
 The [Get Vector Style](/api-reference/get-mvt/) API page has a complete list of parameters.
 
+### Depth Units
+
+To change units for depth soundings, use the `depthUnits` parameter. The available options are `meters`, `feet`, and `fathoms`, and the default is `meters`. Depth soundings will update accordingly:
+
+`
+units=meters
+`
+![depth1](/img/units3.png)
+
+`
+units=feet
+`
+![depth2](/img/units4.png)
+
 ### Depth Limit
 
 The `depthLimit` parameter controls the ENC safety contour and should be set to the depth considered safe for navigation by your vehicle.

@@ -18,6 +18,7 @@ This URL should be used as the base style.
 - **styleId**: Identifier for a custom style.
 - **theme**: Set to `day`, `dusk` or `night` to change color schemes.
 - **depthLimit**: Sets the safety contour value in meters.
+- **depthUnits**: Sets the units for depth soundings: `meters`, `feet`, or `fathoms` are valid.
 - **showEncBoundaries**: Show an outline of the S-57 ENC chart cells.
 
 <b>Example Usage</b><br/><br/>
