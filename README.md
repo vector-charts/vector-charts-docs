@@ -1,4 +1,4 @@
-![VectorCharts Documentation Website](/site-image.png)
+![VectorCharts Documentation Website](/site-image2.png)
 
 This is the source code that runs the [VectorCharts documentation website](https://docs.vectorcharts.com/). If you are looking for the Vector Charts product, please head back to https://vectorcharts.com.
 
