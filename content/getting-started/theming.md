@@ -76,6 +76,35 @@ https://api.vectorcharts.com/api/v1/styles/base.json?token=<token>&theme=night
 `
 ![theming1](/img/19.png)
 
+## Custom Fonts
+
+Because the mapbox style is used to set the fonts for all elements on the map, you may want to change the fontstack that is embedded into the file.
+
+### Changing the Loaded Fonts
+
+To change the fonts loaded by the style, add the parameter `glyphs=...` to the URL.
+
+For example, to load fonts from the Mapbox servers, use `glyphs=mapbox%3A%2F%2Ffonts%2Fmapbox%2F%7Bfontstack%7D%2F%7Brange%7D.pbf` (URL-encoded, decoded this is `mapbox://fonts/mapbox/{fontstack}/{range}.pbf`).
+
+To learn more about Glyphs, see [Mapbox Style Spec > Glyphs](https://docs.mapbox.com/style-spec/reference/glyphs/).
+
+### Changing the Font used by Vector Charts
+
+To set the font used by Vector Charts elements such as depth soundings, use the parameter `font=...`. 
+
+For example, `font=Source%20Code%20Pro%20Medium` will use `Source Code Pro Medium`.
+
+### Usage
+
+Using `glyphs` and `font` in conjunction allows loading fonts from a custom server, and then using the font from that server for Vector Charts elements.
+
+For example, the following URL will use Mapbox-sourced fonts, and change the font to `Source Code Pro Medium`:
+
+`
+https://api.vectorcharts.com/api/v1/styles/base.json?token=<YOUR TOKEN HERE>&font=Source%20Code%20Pro%20Medium&glyphs=mapbox%3A%2F%2Ffonts%2Fmapbox%2F%7Bfontstack%7D%2F%7Brange%7D.pbf"
+`
+
+![fonts](/img/22.png)
 
 ## Custom Styles
 

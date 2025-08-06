@@ -20,6 +20,8 @@ This URL should be used as the base style.
 - **depthLimit**: Sets the safety contour value in meters.
 - **depthUnits**: Sets the units for depth soundings: `meters`, `feet`, or `fathoms` are valid.
 - **showEncBoundaries**: Show an outline of the S-57 ENC chart cells.
+- **glyphs**: Override the glyphs (fonts) for the style with another URL. Must be a URL-encoded string.
+- **font**: Override the font used for soundings and other textual elements.
 
 <b>Example Usage</b><br/><br/>
 in Mapbox GL JS:
