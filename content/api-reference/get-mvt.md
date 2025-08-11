@@ -19,7 +19,10 @@ This URL should be used as the base style.
 - **theme**: Set to `day`, `dusk` or `night` to change color schemes.
 - **depthLimit**: Sets the safety contour value in meters.
 - **depthUnits**: Sets the units for depth soundings: `meters`, `feet`, or `fathoms` are valid.
-- **showEncBoundaries**: Show an outline of the S-57 ENC chart cells.
+- **showEncBoundaries**: Show an outline of the S-57 ENC chart cells. Defaults to `false`.
+- **showPlaceNames**: Show names of landmarks & built-up areas. Defaults to `true`.
+- **showOverscale**: Show an indication when the map is zoomed in too far. Defaults to `true`.
+- **showNoData**: Show an indication where there is no ENC data. Defaults to `true`.
 - **glyphs**: Override the glyphs (fonts) for the style with another URL. Must be a URL-encoded string.
 - **font**: Override the font used for soundings and other textual elements.
 
