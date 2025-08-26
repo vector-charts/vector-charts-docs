@@ -1,10 +1,10 @@
 ---
-title: "Get Raster Tile"
-weight: 3
+title: "Query Raw Data"
+weight: 4
 menu:
   main:
     parent: "api_reference"
-    pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
+    pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 draft: true
 ---
 
