@@ -11,7 +11,7 @@ menu:
 
 Vector Charts charges based on number of requests using the [Pricing structure defined here](https://vectorcharts.com/pricing/).
 
-Requests are free until they pass a minimum quantity (currently 50k requests). When API usage passes the free tier:
+Requests are free until they pass a minimum quantity. When API usage passes the free tier:
 
 - Accounts without payment method are frozen until the end of the month
 - Accounts with payment method begin counting paid requests
