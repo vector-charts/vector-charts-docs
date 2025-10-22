@@ -7,7 +7,7 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
-{{% apiEndpointCard method="GET" path="/api/v1/styles/base.json?token=<token string>" title="Get Vector Style" request=`GET https://api.vectorcharts.com/api/v1/styles/base.json?token=a8652e5b659c41ed86c0b6717d8b0b3f&theme=day&depthLimit=10` response=`... style json document ...` %}}
+{{% apiEndpointCard method="GET" path="/api/v1/styles/base.json?token=<token string>" title="Get Vector Style" request=`GET https://api.vectorcharts.com/api/v1/styles/base.json?token=299ce9bf4f244300a96f3926240f9c0d&theme=day&depthLimit=10` response=`... style json document ...` %}}
 Returns the vector style JSON for use in Mapbox and other map renderers which support vector rendering.
 
 This URL should be used as the base style.

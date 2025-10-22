@@ -7,7 +7,7 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
-{{% apiEndpointCard method="GET" path="/api/v2/tiles/data-geojson-v1/<z>/<x>/<y>.json?token=<token string>" title="Get GeoJSON Tile" request=`GET https://api.vectorcharts.com/api/v2/tiles/data-geojson-v1/12/1240/1515.json?token=f73f12ed4a4f4b6d878bb305d66deea3` response=`{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[]},"properties":{"layerId":"LNDARE","attributes":{"agen":550,"fidn":529328420,"fids":5578,"grup":2...` %}}
+{{% apiEndpointCard method="GET" path="/api/v2/tiles/data-geojson-v1/<z>/<x>/<y>.json?token=<token string>" title="Get GeoJSON Tile" request=`GET https://api.vectorcharts.com/api/v2/tiles/data-geojson-v1/12/1240/1515.json?token=299ce9bf4f244300a96f3926240f9c0d` response=`{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[]},"properties":{"layerId":"LNDARE","attributes":{"agen":550,"fidn":529328420,"fids":5578,"grup":2...` %}}
 
 <span style="color:#9e6c2e">Enterprise Plan Only: This endpoint is restricted to enterprise customers.</span>
 
