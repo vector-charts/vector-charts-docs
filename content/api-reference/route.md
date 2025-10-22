@@ -7,7 +7,7 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 ---
 
-{{% apiEndpointCard method="POST" path="/api/v1/routing/route?token=<token string>" title="Get GeoJSON Tile" request=`POST https://api.vectorcharts.com/api/v1/routing/route?token=299ce9bf4f244300a96f3926240f9c0d
+{{% apiEndpointCard method="POST" path="/api/v1/routing/route?token=<token string>" title="Compute Route" request=`POST https://api.vectorcharts.com/api/v1/routing/route?token=299ce9bf4f244300a96f3926240f9c0d
 Request Body:
 {
     waypoints: [
