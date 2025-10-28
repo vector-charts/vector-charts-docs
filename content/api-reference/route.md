@@ -14,8 +14,7 @@ Request Body:
         [42.338749, -70.986042],
         [42.303464, -70.948277]
     ]
-}` response=`
-Status Code: 200 OK
+}` response=`Status Code: 200 OK
 Response Body:
 {
     "success": true,
