@@ -25,12 +25,12 @@ The [Get Vector Style](/api-reference/get-mvt/) API page has a complete list of 
 To change units for depth soundings, use the `depthUnits` parameter. The available options are `meters`, `feet`, and `fathoms`, and the default is `meters`. Depth soundings will update accordingly:
 
 `
-units=meters
+depthUnits=meters
 `
 ![depth1](/img/units3.png)
 
 `
-units=feet
+depthUnits=feet
 `
 ![depth2](/img/units4.png)
 
