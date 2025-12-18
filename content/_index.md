@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "Cloud API Overview"
 weight: 1
 menu:
   main:
@@ -9,7 +9,7 @@ menu:
 
 ![header](/img/13.png)
 
-Welcome! The Vector Charts API provides nautical charts as vector tiles for display in modern web applications.
+Welcome! The Vector Charts Cloud API provides nautical charts as vector tiles for display in modern web applications.
 
 This documentation will walk you through how to setup your account, create an API token, and start using Vector Charts in your app.
 

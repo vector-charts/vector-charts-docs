@@ -2,9 +2,19 @@
     {{ $currentPage := . }}
     {{ $menu := .Site.Menus.main }}
     {{ $menuName := "main" }}
+    {{ if eq $currentPage.Section "oem" }}
+        {{ $menu = .Site.Menus.oem }}
+        {{ $menuName = "oem" }}
+    {{ end }}
 
     <section class="noJsHidden">
         <div class="mobileHeaderFlexContainer">
+            <div class="bp3-select bp3-minimal mobileSidebarNavDropdown">
+                <select onchange="window.location.replace(this.options[this.selectedIndex].value)">
+                    <option value="/" {{ if not (eq .Page.Section "oem") }}selected{{end}}>Vector Charts Cloud</option>
+                    <!-- <option value="/oem/" {{ if eq .Page.Section "oem" }}selected{{end}}>Vector Charts OEM</option> -->
+                </select>
+            </div>
             <div class="secondaryHeaderSectionDivider"></div>
             <div class="bp3-select bp3-minimal mobileSidebarNavDropdown">
                 <select onchange="window.location.replace(this.options[this.selectedIndex].value)">
