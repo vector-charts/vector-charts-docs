@@ -1,6 +1,6 @@
 steps:
   - wait: ~
-  - label: ":hugo: Build Documentation"
+  - label: "build-hugo-docs"
     key: "build-hugo-docs"
     commands:
       - "hugo --minify --verbose"
@@ -18,8 +18,8 @@ steps:
     artifact_paths:
       - "public/**/*"
   - wait: ~
-  - label: ":rocket: Deploy to Bunny CDN"
-    key: "deploy-docs"
+  - label: "deploy-hugo-docs"
+    key: "deploy-hugo-docs"
     commands:
       - source /home/buildkite-agent/.local/bin/env
       - rm -rf public/
