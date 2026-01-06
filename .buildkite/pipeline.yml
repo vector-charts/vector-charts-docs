@@ -24,7 +24,7 @@ steps:
       - rm -rf public/
       - mkdir -p public/
       - buildkite-agent artifact download 'public/**' public/
-      - source ~/.local/bin/env && trifold status -v && trifold publish
+      - source /home/buildkite-agent/.local/bin/env && trifold status -v && trifold publish
     agents:
       queue: "self-hosted-linux-x86-64"
     plugins:
