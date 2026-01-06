@@ -1,0 +1,46 @@
+steps:
+  - wait: ~
+  - label: "build-hugo-docs"
+    key: "build-hugo-docs"
+    commands:
+      - "hugo --minify --verbose"
+    agents:
+      queue: "self-hosted-linux-x86-64"
+    plugins:
+      - docker:
+          image: "402590802363.dkr.ecr.us-east-2.amazonaws.com/dev-hugo-builder:latest"
+          workdir: /site
+          mount-buildkite-agent: true
+          propagate-environment: true
+          propagate-uid-gid: true
+          entrypoint: ""
+          shell: ["/bin/bash", "-c"]
+    artifact_paths:
+      - "public/**/*"
+  - wait: ~
+  - label: "deploy-hugo-docs"
+    key: "deploy-hugo-docs"
+    commands:
+      - source /home/buildkite-agent/.local/bin/env
+      - rm -rf public/
+      - mkdir -p public/
+      - buildkite-agent artifact download 'public/**' public/
+      - trifold status -v
+      - trifold publish
+    agents:
+      queue: "self-hosted-linux-x86-64"
+    plugins:
+      - docker:
+          image: "402590802363.dkr.ecr.us-east-2.amazonaws.com/dev-hugo-builder:latest"
+          workdir: /site
+          mount-buildkite-agent: true
+          propagate-environment: true
+          propagate-uid-gid: true
+          entrypoint: ""
+          shell: ["/bin/bash", "-c"]
+          environment:
+            - "BUNNY_API_KEY"
+    branches: "main"
+
+secrets:
+  - BUNNY_API_KEY
