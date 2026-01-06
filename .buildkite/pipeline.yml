@@ -21,10 +21,12 @@ steps:
   - label: "deploy-hugo-docs"
     key: "deploy-hugo-docs"
     commands:
+      - source /home/buildkite-agent/.local/bin/env
       - rm -rf public/
       - mkdir -p public/
       - buildkite-agent artifact download 'public/**' public/
-      - source /home/buildkite-agent/.local/bin/env && trifold status -v && trifold publish
+      - trifold status -v
+      - trifold publish
     agents:
       queue: "self-hosted-linux-x86-64"
     plugins:
