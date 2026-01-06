@@ -21,7 +21,6 @@ steps:
   - label: "deploy-hugo-docs"
     key: "deploy-hugo-docs"
     commands:
-      - source /home/buildkite-agent/.local/bin/env
       - rm -rf public/
       - mkdir -p public/
       - buildkite-agent artifact download 'public/**' public/
