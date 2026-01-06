@@ -1,0 +1,13 @@
+provider = "bunny"
+remote_path = ""
+local_path = "public"
+ignore = []
+remote_ignore = []
+
+[bunny]
+storage_zone = "vector-charts-docs"
+custom_404_page = "/404.html"
+
+[[redirects]]
+    from = "*://vector-charts-docs.b-cdn.net/*"
+    to = "https://docs.vectorcharts.com{{path}}"
