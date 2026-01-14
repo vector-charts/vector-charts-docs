@@ -9,7 +9,7 @@ steps:
     plugins:
       - docker:
           image: "402590802363.dkr.ecr.us-east-2.amazonaws.com/dev-hugo-builder:latest"
-          always-pull: true
+          always-pull: false
           workdir: /site
           mount-buildkite-agent: true
           propagate-environment: true
@@ -33,7 +33,7 @@ steps:
     plugins:
       - docker:
           image: "402590802363.dkr.ecr.us-east-2.amazonaws.com/dev-hugo-builder:latest"
-          always-pull: true
+          always-pull: false
           workdir: /site
           mount-buildkite-agent: true
           propagate-environment: true
