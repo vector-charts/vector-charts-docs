@@ -11,12 +11,8 @@ menu:
 Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 {
-    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-    "job_type": "refresh-public-charts",
-    "job_state": "pending",
-    "percent_complete": 0,
-    "created_at": "2025-01-15T12:00:00.000Z",
-    "updated_at": "2025-01-15T12:00:00.000Z"
+    "job_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "job_status": "pending"
 }` %}}
 
 <span style="color:#9e6c2e">Enterprise Only: This endpoint is only available on enterprise instances.
@@ -37,14 +33,10 @@ This endpoint does not accept a request body.
 
 <b>Response Schema</b>
 
-On success, the endpoint returns the created job object, indicating that the request has been queued for processing:
+On success, the endpoint returns a response indicating that the job has been queued for processing:
 
-- `id`: Unique identifier for the background job.
-- `job_type`: Will be `"refresh-public-charts"`.
-- `job_state`: Initial state of the job, `"pending"`. Transitions to `"processing"`, then `"completed"` or `"failed"`.
-- `percent_complete`: Progress indicator (0–100).
-- `created_at`: Timestamp when the job was created.
-- `updated_at`: Timestamp when the job was last updated.
+- `job_id`: Unique identifier for the chart refresh job.
+- `job_status`: Initial status will be `"pending"`. Transitions to `"processing"`, then `"completed"` or `"failed"`.
 
 <b>Error Responses</b>
 
