@@ -47,3 +47,5 @@ The endpoint returns an array of objects, each object representing one data sour
 - `sourceUrl`: A URL to the original data, if available.
 - `dataSourcedAt`: The timestamp that the data was downloaded from the source at, in milliseconds since unix epoch.
 - `dataProcessedAt`: The timestamp that the data was processed into the Vector Charts system, in milliseconds since unix epoch.
+
+{{% /apiEndpointCard %}}
