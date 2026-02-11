@@ -41,10 +41,6 @@ This endpoint requires a Bearer token in the `Authorization` header.
 
 - **Authorization** <span style="color:red;">(Required)</span>: `Bearer <token>` — a valid Vector Charts API token.
 
-<b>Request Body</b>
-
-This endpoint does not accept a request body.
-
 <b>Response Schema</b>
 
 The endpoint returns an array of job objects. Each job has the following fields:
