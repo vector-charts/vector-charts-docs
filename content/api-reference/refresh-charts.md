@@ -12,7 +12,7 @@ Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 {
     "job_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-    "job_status": "pending"
+    "job_state": "pending"
 }` %}}
 
 <span style="color:#9e6c2e">Enterprise Only: This endpoint is only available on enterprise instances.
@@ -36,7 +36,7 @@ This endpoint does not accept a request body.
 On success, the endpoint returns a response indicating that the job has been queued for processing:
 
 - `job_id`: Unique identifier for the chart refresh job.
-- `job_status`: Initial status will be `"pending"`. Transitions to `"processing"`, then `"completed"` or `"failed"`.
+- `job_state`: Initial status will be `"pending"`. Transitions to `"processing"`, then `"completed"` or `"failed"`.
 
 <b>Error Responses</b>
 
