@@ -108,6 +108,10 @@ https://api.vectorcharts.com/api/v1/styles/base.json?token=<YOUR TOKEN HERE>&fon
 
 ## Custom Styles
 
-Enterprise customers gain access to the Style Editor, which gives complete control over map layers & color palettes.
+Business Plan customers gain access to the Style Editor, which gives complete control over map layers & color palettes.
+
+If you are a Business Plan customer, navigate to the Styles tab to edit a custom style.
+
+Documentation for the Style Editor is coming soon.
 
 [Contact Us](https://vectorcharts.com/contact-us/) to learn more about custom styles.

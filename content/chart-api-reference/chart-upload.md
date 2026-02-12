@@ -1,9 +1,9 @@
 ---
-title: "Custom S-57 and S-63 Chart Upload"
-weight: 6
+title: "Upload Charts"
+weight: 1
 menu:
   main:
-    parent: "api_reference"
+    parent: "chart_api_reference"
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 ---
 
@@ -22,7 +22,9 @@ Response Body:
     }
 }` %}}
 
-Upload custom S-57 or S-63 chart files to your Vector Charts account. The file is streamed directly to storage, and the response is returned once the upload is complete. A background job is then created to index the chart data — the `status` field in the response will be `"pending"` until processing finishes.
+<span style="color:#9e6c2e">Feature Preview: some features of this endpoint are limited to enterprise or self-hosted customers.</span>
+
+Upload custom S-57 charts, S-63 charts, or S-63 permits to your Vector Charts account. The file is streamed directly to storage, and the response is returned once the upload is complete. A background job is then created to index the chart data — the `status` field in the response will be `"pending"` until processing finishes.
 
 If any uploaded cells match existing cells on the account, the existing data will be overwritten. Similarly, uploading a new permit file will replace the existing permit.
 

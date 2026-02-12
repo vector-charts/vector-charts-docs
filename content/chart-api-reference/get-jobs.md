@@ -3,7 +3,7 @@ title: "Get Jobs"
 weight: 7
 menu:
   main:
-    parent: "api_reference"
+    parent: "chart_api_reference"
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
@@ -31,9 +31,9 @@ Response Body:
     }
 ]` %}}
 
-<span style="color:#9e6c2e">Enterprise Only: This endpoint is only available on enterprise instances.
+<span style="color:#9e6c2e">Feature Preview: some features of this endpoint are limited to enterprise or self-hosted customers.</span>
 
-Retrieve all jobs on the instance, sorted by most recently updated first. This can be used to monitor the status of internal operations.
+Retrieve the status of background jobs running on the instance. Background jobs are used to handle the ingestion of nautical chart data.
 
 <b>Authentication</b>
 

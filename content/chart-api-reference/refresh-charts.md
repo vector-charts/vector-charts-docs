@@ -1,9 +1,9 @@
 ---
-title: "Refresh Public Charts"
-weight: 6
+title: "Refresh Charts"
+weight: 2
 menu:
   main:
-    parent: "api_reference"
+    parent: "chart_api_reference"
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 ---
 
@@ -15,7 +15,7 @@ Response Body:
     "job_state": "pending"
 }` %}}
 
-<span style="color:#9e6c2e">Enterprise Only: This endpoint is only available on enterprise instances.
+<span style="color:#9e6c2e">Feature Preview: some features of this endpoint are limited to enterprise or self-hosted customers.</span>
 
 Trigger a refresh of all public nautical chart data (NOAA ENCs and USA Inland ENCs). This creates an asynchronous background job that downloads the latest charts from their upstream sources and re-indexes them into the Vector Charts system.
 
