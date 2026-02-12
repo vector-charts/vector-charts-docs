@@ -21,14 +21,19 @@ unsafe = true
         weight = 1
     [[menu.main]]
         identifier = "api_reference"
-        title = "API Reference"
+        title = "Core API Reference"
         pre = "<span class='bp3-icon bp3-icon-code'></span>"
         weight = 2
+    [[menu.main]]
+        identifier = "chart_api_reference"
+        title = "Chart API Reference"
+        pre = "<span class='bp3-icon bp3-icon-map'></span>"
+        weight = 3
     [[menu.main]]
         identifier = "examples"
         title = "Examples"
         pre = "<span class='bp3-icon bp3-icon-learning'></span>"
-        weight = 3
+        weight = 4
     [[menu.oem]]
         identifier = "getting_started"
         title = "Getting Started"
