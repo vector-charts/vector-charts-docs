@@ -11,8 +11,8 @@ menu:
 Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 {
-    "job_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-    "job_state": "pending"
+    "jobId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "jobState": "pending"
 }` %}}
 
 <span style="color:#9e6c2e">Feature Preview: some features of this endpoint are limited to enterprise or self-hosted customers.</span>
@@ -31,8 +31,8 @@ This endpoint requires a Bearer token in the `Authorization` header.
 
 On success, the endpoint returns a response indicating that the job has been queued for processing:
 
-- `job_id`: Unique identifier for the chart refresh job.
-- `job_state`: Initial status will be `"pending"`. Transitions to `"processing"`, then `"completed"` or `"failed"`.
+- `jobId`: Unique identifier for the chart refresh job.
+- `jobState`: Initial status will be `"pending"`. Transitions to `"processing"`, then `"completed"` or `"failed"`.
 
 <b>Error Responses</b>
 
