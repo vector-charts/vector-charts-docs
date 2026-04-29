@@ -24,6 +24,7 @@ This URL should be used as the base style.
 - **showOverscale**: Show an indication when the map is zoomed in too far. Defaults to `true`.
 - **showNoData**: Show an indication where there is no ENC data. Defaults to `true`.
 - **roundOffSoundings**: Round soundings to the nearest (localized) whole number. Defaults to `false`.
+- **showLightSectors**: Toggle the visibility of lighthouse sector visualization. Defaults to `true`.
 - **glyphs**: Override the glyphs (fonts) for the style with another URL. Must be a URL-encoded string.
 - **font**: Override the font used for soundings and other textual elements.
 
