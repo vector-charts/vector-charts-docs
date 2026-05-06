@@ -353,3 +353,21 @@ code {
     max-width: 100%;
     border: 1px solid rgba(0,0,0,0.1);
 }
+
+table {
+    border-style: solid;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+tr {
+    /* border: 1px solid black; */
+}
+
+td {
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+th {
+    border: 1px solid rgba(0,0,0,0.1);
+
+}

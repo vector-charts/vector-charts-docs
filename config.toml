@@ -41,9 +41,14 @@ unsafe = true
         weight = 1
     [[menu.oem]]
         identifier = "api_reference"
-        title = "API Reference"
+        title = "Core API Reference"
         pre = "<span class='bp3-icon bp3-icon-code'></span>"
         weight = 2
+    [[menu.oem]]
+        identifier = "admin_api_reference"
+        title = "Admin API Reference"
+        pre = "<span class='bp3-icon bp3-icon-code'></span>"
+        weight = 3
     [[menu.oem]]
         identifier = "examples"
         title = "Examples"

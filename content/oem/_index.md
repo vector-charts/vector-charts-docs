@@ -1,5 +1,5 @@
 ---
-title: "OEM Overview"
+title: "OEM API Overview"
 weight: 1
 menu:
   oem:
@@ -8,12 +8,18 @@ menu:
     weight: 1
 ---
 
-Welcome! Vector Charts OEM is our self-hosted offering of the Vector Charts Server API. 
+Vector Charts OEM is the self-hosted variant of our Vector Charts API. Vector Charts OEM extends the ability to display vector-tile-based Nautical Charts to web apps running in offline & on-device products. 
 
-Vector Charts provides a vector-tile based Nautical Chart rendering engine, and Vector Charts OEM extends this capability to be deployed into any offline & on-device usage.
+In addition, the OEM API supports S-63 encrypted charts, headless chart management via an API, and other features which can be used to deeply integrate nautical charts into your product.
 
-This documentation covers the installation and configuration of Vector Charts OEM, along with OEM-specific APIs for chart management and licensing.
+## Getting Started
 
-## Prerequisites
+The OEM software is limited to approved customers & partners. To get started, please [contact our team](https://vectorcharts.com/contact-us) with the details of your use case.
 
-TODO
+<br/>
+
+---
+
+<br/>
+
+[Next: System Requirements](/oem/system-requirements)
