@@ -54,7 +54,7 @@ On success, the endpoint returns the updated token record.
 
 <b>Error Responses</b>
 
-- **400 Bad Request**: No token exists with the given `id`.
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
+- **404 Not Found**: No token exists with the given `id` on the caller's account.
 
 {{% /apiEndpointCard %}}
