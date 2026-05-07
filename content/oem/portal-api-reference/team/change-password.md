@@ -25,7 +25,7 @@ This endpoint requires a Bearer token in the `Authorization` header.
 
 <b>Request Body</b>
 
-*The request body should be JSON-encoded.*
+The request body should be JSON-encoded.
 
 - **password**: The new password. Must be at least 4 characters long.
 
