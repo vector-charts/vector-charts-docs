@@ -20,8 +20,8 @@ See [Authentication](/oem/portal-api-reference/authentication/) for details on a
 
 ## Categories
 
-- **Authentication**: log in, log out, and inspect the current session.
-- **API Tokens**: create, list, update, and revoke Core API tokens.
+- [**Authentication**](/oem/portal-api-reference/authentication/): log in, log out, and inspect the current session.
+- [**API Tokens**](/oem/portal-api-reference/api-tokens/): create, list, update, and revoke Core API tokens.
 - **Charts**: upload S-57 and S-63 charts, list uploads, and manage S-63 permits.
 - **Styles**: create and manage custom map styles.
 - **Jobs**: inspect background jobs and trigger maintenance operations.

@@ -17,7 +17,7 @@ Either token type works on every Portal API endpoint.
 
 ## Session Tokens
 
-A session token is obtained by exchanging a username and password at the [login endpoint](/oem/portal-api-reference/auth-login/). Session tokens are intended for the admin UI and short-lived scripts.
+A session token is obtained by exchanging a username and password at the [login endpoint](/oem/portal-api-reference/authentication/login/). Session tokens are intended for the admin UI and short-lived scripts.
 
 <pre>
 POST https://&lt;your-host&gt;:9909/api/portal/v1/auth/login
@@ -50,11 +50,11 @@ The response includes a `token` object whose `id` field is the bearer string:
 }
 </pre>
 
-Session tokens remain valid until they are explicitly invalidated via the [logout endpoint](/oem/portal-api-reference/auth-logout/).
+Session tokens remain valid until they are explicitly invalidated via the [logout endpoint](/oem/portal-api-reference/authentication/logout/).
 
 ## API Tokens
 
-API tokens are long-lived tokens managed through the [API Tokens endpoints](/oem/portal-api-reference/). They are intended for headless integrations and CI/CD systems where storing user credentials is not appropriate.
+API tokens are long-lived tokens managed through the [API Tokens endpoints](/oem/portal-api-reference/api-tokens/). They are intended for headless integrations and CI/CD systems where storing user credentials is not appropriate.
 
 The same API token can be used to authenticate against both the Portal API and the [Core API](/oem/api-reference/).
 

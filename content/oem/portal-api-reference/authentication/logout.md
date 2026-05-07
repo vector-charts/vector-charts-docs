@@ -1,9 +1,9 @@
 ---
 title: "Logout"
-weight: 4
+weight: 2
 menu:
   oem:
-    parent: "portal_api_reference"
+    parent: "portal_api_reference_authentication"
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 ---
 
@@ -12,7 +12,7 @@ Authorization: Bearer <token>` response=`Status Code: 204 No Content` %}}
 
 Invalidate the session token used for the request. After a successful logout, the token can no longer be used to authenticate further requests.
 
-This endpoint only invalidates session tokens. API tokens are managed through the [API Tokens endpoints](/oem/portal-api-reference/) and are not affected by this request.
+This endpoint only invalidates session tokens. API tokens are managed through the [API Tokens endpoints](/oem/portal-api-reference/api-tokens/) and are not affected by this request.
 
 <b>Authentication</b>
 

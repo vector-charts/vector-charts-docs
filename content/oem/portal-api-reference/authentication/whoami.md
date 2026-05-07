@@ -1,9 +1,9 @@
 ---
 title: "Who Am I"
-weight: 5
+weight: 3
 menu:
   oem:
-    parent: "portal_api_reference"
+    parent: "portal_api_reference_authentication"
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 

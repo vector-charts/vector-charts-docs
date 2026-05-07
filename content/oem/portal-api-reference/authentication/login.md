@@ -1,9 +1,9 @@
 ---
 title: "Login"
-weight: 3
+weight: 1
 menu:
   oem:
-    parent: "portal_api_reference"
+    parent: "portal_api_reference_authentication"
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 ---
 
