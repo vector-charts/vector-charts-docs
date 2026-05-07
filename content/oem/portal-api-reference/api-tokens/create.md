@@ -40,7 +40,7 @@ This endpoint requires a Bearer token in the `Authorization` header.
 
 <b>Request Body</b>
 
-*The request body should be JSON-encoded.*
+The request body should be JSON-encoded.
 
 - **name**: A human-readable label for the token. Used in the admin UI to distinguish tokens.
 - **restrictions** (Optional): An object describing limits on how the token can be used.

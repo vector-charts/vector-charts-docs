@@ -43,7 +43,7 @@ This endpoint requires a Bearer token in the `Authorization` header.
 
 <b>Request Body</b>
 
-*The request body should be JSON-encoded.*
+The request body should be JSON-encoded.
 
 - **name** (Optional): A human-readable label for the token.
 - **restrictions** (Optional): An object describing limits on how the token can be used. See [Create API Token](/oem/portal-api-reference/api-tokens/create/) for the full schema.

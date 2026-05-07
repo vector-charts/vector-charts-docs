@@ -38,7 +38,7 @@ This endpoint does not require authentication.
 
 <b>Request Body</b>
 
-*The request body should be JSON-encoded.*
+The request body should be JSON-encoded.
 
 - **username**: The user's username.
 - **password**: The user's password.

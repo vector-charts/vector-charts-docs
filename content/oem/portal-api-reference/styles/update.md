@@ -54,7 +54,7 @@ This endpoint requires a Bearer token in the `Authorization` header.
 
 <b>Request Body</b>
 
-*The request body should be JSON-encoded.*
+The request body should be JSON-encoded.
 
 - **name** (Optional): A human-readable label for the style.
 - **parameters** (Optional): The full rendering parameters object. See [Styles](/oem/portal-api-reference/styles/) for the schema.
