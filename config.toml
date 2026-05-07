@@ -45,8 +45,8 @@ unsafe = true
         pre = "<span class='bp3-icon bp3-icon-code'></span>"
         weight = 2
     [[menu.oem]]
-        identifier = "admin_api_reference"
-        title = "Admin API Reference"
+        identifier = "portal_api_reference"
+        title = "Portal API Reference"
         pre = "<span class='bp3-icon bp3-icon-code'></span>"
         weight = 3
     [[menu.oem]]
