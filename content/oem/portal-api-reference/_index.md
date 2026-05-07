@@ -24,5 +24,5 @@ See [Authentication](/oem/portal-api-reference/authentication/) for details on a
 - [**API Tokens**](/oem/portal-api-reference/api-tokens/): create, list, update, and revoke Core API tokens.
 - [**Charts**](/oem/portal-api-reference/charts/): upload S-57 and S-63 charts, list uploads, and manage S-63 permits.
 - [**Styles**](/oem/portal-api-reference/styles/): create and manage custom map styles.
-- **Jobs**: inspect background jobs and trigger maintenance operations.
+- [**Jobs**](/oem/portal-api-reference/jobs/): inspect background jobs and trigger maintenance operations.
 - **Users & Team**: invite team members, change passwords, and list users.

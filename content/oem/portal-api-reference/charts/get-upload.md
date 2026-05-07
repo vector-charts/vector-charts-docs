@@ -23,7 +23,7 @@ Response Body:
         "expiredCharts": 2,
         "logs": [
             {
-                "timestamp": 1736942410000,
+                "timestamp": "2026-01-15T08:00:10.000+00:00",
                 "type": "info",
                 "message": "Indexing 12 cells"
             }
@@ -56,7 +56,7 @@ The endpoint returns a single upload record.
 - `upload.uploaderEmail`: The email of the user who uploaded the file.
 - `upload.totalCharts`: The total number of chart cells contained in the upload.
 - `upload.expiredCharts`: The number of chart cells in the upload that are past their expiry date.
-- `upload.logs`: An array of log entries emitted by the ingestion job. Each entry has `timestamp` (milliseconds since unix epoch), `type` (one of `info`, `warning`, `error`), and `message`.
+- `upload.logs`: An array of log entries emitted by the ingestion job. Each entry has `timestamp` (ISO 8601 UTC string), `type` (one of `info`, `warning`, `error`), and `message`.
 
 <b>Error Responses</b>
 
