@@ -1,6 +1,6 @@
 ---
 title: "Get S-63 Permit"
-weight: 1
+weight: 2
 menu:
   oem:
     parent: "portal_api_reference_charts"

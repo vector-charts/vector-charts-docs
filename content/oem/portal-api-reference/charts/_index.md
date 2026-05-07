@@ -25,7 +25,7 @@ Maximum upload size is 1 GB.
 Chart uploads are processed asynchronously. When a file is uploaded, an upload record is created with status `pending`, and a background job is started to ingest the chart data. The status of an upload progresses through the following values:
 
 - `pending`: The file has been received and is queued for processing.
-- `running`: A processing job is actively working on the upload.
+- `processing`: A processing job is actively working on the upload.
 - `completed`: Processing finished successfully and the charts are available for use.
 - `failed`: Processing encountered an error. See the upload's `logs` field for details.
 - `cancelled`: Processing was cancelled, either by deletion of the upload or by an administrator.
