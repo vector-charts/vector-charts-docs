@@ -1,5 +1,5 @@
 ---
-title: "Who Am I"
+title: "Get Authenticated User"
 weight: 3
 menu:
   oem:
@@ -7,7 +7,7 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
-{{% apiEndpointCard method="GET" path="/api/portal/v1/auth/whoami" title="Who Am I" request=`GET https://<your-host>:9909/api/portal/v1/auth/whoami
+{{% apiEndpointCard method="GET" path="/api/portal/v1/auth/whoami" title="Get Authenticated User" request=`GET https://<your-host>:9909/api/portal/v1/auth/whoami
 Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 {
