@@ -14,9 +14,7 @@ Response Body:
     "message": "Upload deletion scheduled"
 }` %}}
 
-Schedule deletion of an upload and the chart cells it produced. Deletion is asynchronous: the endpoint returns immediately, and a background job removes the upload's data from storage and the chart database. The upload is hidden from [List Uploads](/oem/portal-api-reference/charts/list-uploads/) as soon as the request is accepted.
-
-Any active ingestion jobs for the upload are cancelled.
+Delete an uploaded file and its associated chart data. Cancels any active ingestion jobs for that upload.
 
 <b>Authentication</b>
 
@@ -30,7 +28,7 @@ This endpoint requires a Bearer token in the `Authorization` header.
 
 <b>Response Schema</b>
 
-- `message`: A description of the action taken. Either `"Upload deletion scheduled"` for a newly scheduled deletion, or `"Upload deletion already scheduled"` if a deletion was already pending.
+- `message`: A status message.
 
 <b>Error Responses</b>
 
