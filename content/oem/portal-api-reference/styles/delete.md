@@ -7,7 +7,7 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-danger\">DELETE</div>"
 ---
 
-{{% apiEndpointCard method="DELETE" path="/api/portal/v1/styles/{id}" title="Delete Style" request=`DELETE https://<your-host>:9909/api/portal/v1/styles/a1b2c3d4-e5f6-7890-abcd-ef1234567890
+{{% apiEndpointCard method="DELETE" path="/api/portal/v1/styles/{id}" title="Delete Style" request=`DELETE https://<your-host>:9909/api/portal/v1/styles/42
 Authorization: Bearer <token>` response=`Status Code: 204 No Content` %}}
 
 Permanently delete a style. Subsequent Core API requests that reference the deleted `styleId` will fall back to the default style.

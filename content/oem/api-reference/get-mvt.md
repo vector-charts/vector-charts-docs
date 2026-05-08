@@ -1,40 +1,39 @@
 ---
-title: "Get Vector Style"
-weight: 2
+title: "Get Vector Tile"
+weight: 3
 menu:
   oem:
     parent: "api_reference"
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
-{{% apiEndpointCard method="GET" path="/api/v1/styles/base.json?token=<token string>" title="Get Vector Style" request=`GET https://api.vectorcharts.com/api/v1/styles/base.json?token=299ce9bf4f244300a96f3926240f9c0d&theme=day&depthLimit=10` response=`... style json document ...` %}}
-Returns the vector style JSON for use in Mapbox and other map renderers which support vector rendering.
+{{% apiEndpointCard method="GET" path="/api/v2/tiles/enc-v2/{z}/{x}/{y}.mvt" title="Get Vector Tile" request=`GET https://<your-host>:9909/api/v2/tiles/enc-v2/12/1240/1515.mvt
+Authorization: Bearer <token>` response=`Status Code: 200 OK
+Content-Type: application/x-protobuf
 
-Identical to the Vector Charts Cloud endpoint, but does not require a token.
+... binary MVT protobuf ...` %}}
 
-This URL should be used as the base style.
+Returns a Mapbox Vector Tile containing rendered chart data for the given XYZ tile coordinates. Each tile combines basemap geometry, ENC features from all overlapping cells, and runtime layers into a single protobuf payload.
 
-<b>Query Parameters</b>
+Renderers do not usually call this endpoint directly. Instead, point Mapbox or another vector-capable renderer at the [vector style endpoint](/oem/api-reference/get-style/), which references this URL internally.
 
-- **styleId**: Identifier for a custom style.
-- **theme**: Set to `day`, `dusk` or `night` to change color schemes.
-- **depthLimit**: Sets the safety contour value in meters.
-- **depthUnits**: Sets the units for depth soundings: `meters`, `feet`, or `fathoms` are valid.
-- **showEncBoundaries**: Show an outline of the S-57 ENC chart cells. Defaults to `false`.
-- **showPlaceNames**: Show names of landmarks & built-up areas. Defaults to `true`.
-- **showOverscale**: Show an indication when the map is zoomed in too far. Defaults to `true`.
-- **showNoData**: Show an indication where there is no ENC data. Defaults to `true`.
-- **glyphs**: Override the glyphs (fonts) for the style with another URL. Must be a URL-encoded string.
-- **font**: Override the font used for soundings and other textual elements.
+<b>Authentication</b>
 
-<b>Example Usage</b><br/><br/>
-in Mapbox GL JS:
+This endpoint accepts a Bearer token in the `Authorization` header or a `token` query parameter. See [Authentication](/oem/api-reference/) for details.
 
-<pre class="light">
-const map = new mapboxgl.Map({
-    ...
-    style: "https://api.vectorcharts.com/api/v1/styles/base.json?theme=day&depthLimit=10"
-});
-</pre>
+<b>Path Parameters</b>
+
+- **z**: Zoom level. Must be between `0` and `16` inclusive.
+- **x**: Tile column.
+- **y**: Tile row.
+
+<b>Response</b>
+
+On success, returns a binary MVT protobuf with `Content-Type: application/x-protobuf`. The tile is empty (no layers) outside of charted areas.
+
+<b>Error Responses</b>
+
+- **400 Bad Request**: The `z`, `x`, or `y` parameter is out of range, or `z` is greater than `16`.
+- **401 Unauthorized**: The token is missing or not valid.
 
 {{% /apiEndpointCard %}}
