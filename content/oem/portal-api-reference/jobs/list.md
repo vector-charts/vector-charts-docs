@@ -21,6 +21,7 @@ Response Body:
         "result": null,
         "logs": [],
         "percentComplete": 100,
+        "priority": 0,
         "createdAt": 1736942400000,
         "updatedAt": 1736946000000,
         "steps": [
@@ -75,6 +76,7 @@ The endpoint returns an array of job records.
 - `result`: An object of outputs produced when the job completes. `null` until the job reaches a terminal state. The shape depends on the value of `jobType`.
 - `logs`: An array of log entries emitted by the job. Each entry has `timestamp` (ISO 8601 UTC string), `type` (one of `info`, `warning`, `error`), and `message`.
 - `percentComplete`: An integer between `0` and `100` indicating the job's progress.
+- `priority`: An integer indicating the job's scheduling priority. Higher values run before lower values. Defaults to `0`.
 - `createdAt`: Timestamp when the job was created, in milliseconds since unix epoch.
 - `updatedAt`: Timestamp when the job was last updated, in milliseconds since unix epoch.
 - `steps`: An array of sub-task records belonging to the job. The shape of a step record is not part of the stable public surface.

@@ -7,15 +7,15 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
-{{% apiEndpointCard method="GET" path="/api/portal/v1/charts/uploads/{id}" title="Get Upload" request=`GET https://<your-host>:9909/api/portal/v1/charts/uploads/a1b2c3d4-e5f6-7890-abcd-ef1234567890
+{{% apiEndpointCard method="GET" path="/api/portal/v1/charts/uploads/{id}" title="Get Upload" request=`GET https://<your-host>:9909/api/portal/v1/charts/uploads/5
 Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 {
     "upload": {
-        "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+        "id": 5,
         "filename": "US5MA10M.000",
         "fileSize": 104857600,
-        "status": "completed",
+        "status": "succeeded",
         "createdAt": 1736942400000,
         "updatedAt": 1736946000000,
         "uploaderEmail": "example@zydromarine.com",

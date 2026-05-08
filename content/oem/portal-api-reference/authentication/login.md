@@ -18,15 +18,15 @@ Response Body:
 {
     "token": {
         "id": "f3a1c0d4e5b6a7c8d9e0f1a2b3c4d5e6",
-        "userId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+        "userId": 1
     },
     "user": {
-        "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+        "id": 1,
         "email": "admin",
         "isAdmin": true,
         "isAccountOwner": false,
         "account": {
-            "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+            "id": 1,
             "name": "Default"
         }
     }

@@ -13,10 +13,10 @@ Response Body:
 {
     "uploads": [
         {
-            "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+            "id": 5,
             "filename": "US5MA10M.000",
             "fileSize": 104857600,
-            "status": "completed",
+            "status": "succeeded",
             "createdAt": 1736942400000,
             "updatedAt": 1736946000000,
             "uploaderEmail": "example@zydromarine.com",

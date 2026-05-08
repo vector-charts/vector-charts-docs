@@ -7,7 +7,7 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-danger\">DELETE</div>"
 ---
 
-{{% apiEndpointCard method="DELETE" path="/api/portal/v1/charts/uploads/{id}" title="Delete Upload" request=`DELETE https://<your-host>:9909/api/portal/v1/charts/uploads/a1b2c3d4-e5f6-7890-abcd-ef1234567890
+{{% apiEndpointCard method="DELETE" path="/api/portal/v1/charts/uploads/{id}" title="Delete Upload" request=`DELETE https://<your-host>:9909/api/portal/v1/charts/uploads/5
 Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 {

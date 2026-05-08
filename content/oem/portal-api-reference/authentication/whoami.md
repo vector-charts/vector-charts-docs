@@ -11,12 +11,12 @@ menu:
 Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 {
-    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "id": 1,
     "email": "admin",
     "isAdmin": true,
     "isAccountOwner": false,
     "account": {
-        "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+        "id": 1,
         "name": "Default"
     }
 }` %}}

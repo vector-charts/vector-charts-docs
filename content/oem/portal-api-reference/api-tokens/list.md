@@ -14,7 +14,7 @@ Response Body:
     {
         "id": "299ce9bf4f244300a96f3926240f9c0d",
         "name": "Development Token",
-        "userId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+        "userId": 1,
         "userEmail": "example@zydromarine.com",
         "createdAt": 1736942400000,
         "lastUsedAt": 1736946000000,
@@ -25,7 +25,7 @@ Response Body:
     {
         "id": "5f8e7d6c5b4a3210fedcba9876543210",
         "name": "Production Token",
-        "userId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+        "userId": 1,
         "userEmail": "example@zydromarine.com",
         "createdAt": 1736942400000,
         "lastUsedAt": 1736946000000,

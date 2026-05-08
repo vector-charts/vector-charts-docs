@@ -15,7 +15,7 @@ file: [binary file data]` response=`Status Code: 200 OK
 Response Body:
 {
     "upload": {
-        "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+        "id": 5,
         "filename": "US5MA10M.000",
         "fileSize": 104857600,
         "status": "pending"

@@ -21,7 +21,7 @@ Response Body:
 {
     "id": "299ce9bf4f244300a96f3926240f9c0d",
     "name": "Production Token",
-    "userId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "userId": 1,
     "userEmail": "example@zydromarine.com",
     "createdAt": 1736942400000,
     "lastUsedAt": null,

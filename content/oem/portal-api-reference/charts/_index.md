@@ -26,7 +26,7 @@ Chart uploads are processed asynchronously. When a file is uploaded, an upload r
 
 - `pending`: The file has been received and is queued for processing.
 - `processing`: A processing job is actively working on the upload.
-- `completed`: Processing finished successfully and the charts are available for use.
+- `succeeded`: Processing finished successfully and the charts are available for use.
 - `failed`: Processing encountered an error. See the upload's `logs` field for details.
 - `cancelled`: Processing was cancelled, either by deletion of the upload or by an administrator.
 
