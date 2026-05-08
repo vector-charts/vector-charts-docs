@@ -1,9 +1,9 @@
 ---
 title: "Change Password"
-weight: 3
+weight: 4
 menu:
   oem:
-    parent: "portal_api_reference_team"
+    parent: "portal_api_reference_authentication"
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 ---
 

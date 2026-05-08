@@ -25,5 +25,3 @@ See [Authentication](/oem/portal-api-reference/authentication/) for details on a
 - [**Charts**](/oem/portal-api-reference/charts/): upload S-57 and S-63 charts, list uploads, and manage S-63 permits.
 - [**Styles**](/oem/portal-api-reference/styles/): create and manage custom map styles.
 - [**Jobs**](/oem/portal-api-reference/jobs/): inspect background jobs and trigger maintenance operations.
-- [**Team**](/oem/portal-api-reference/team/): invite team members, list members, and change your password.
-- [**Admin**](/oem/portal-api-reference/admin/): server-wide management operations for admin users.
