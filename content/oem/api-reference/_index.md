@@ -44,9 +44,3 @@ const map = new mapboxgl.Map({
     style: "https://&lt;your-host&gt;:9909/api/v1/styles/base.json?token=&lt;token string&gt;"
 });
 </pre>
-
-## Categories
-
-- [**Tiles**](/oem/api-reference/get-mvt/): vector and raster tiles for rendering charts.
-- [**Query**](/oem/api-reference/enc-query/): ENC feature lookups by location.
-- [**Datasets**](/oem/api-reference/get-attributions/): attribution metadata for the charts in use.
