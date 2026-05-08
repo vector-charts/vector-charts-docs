@@ -40,13 +40,13 @@ unsafe = true
         pre = "<span class='bp3-icon bp3-icon-learning'></span>"
         weight = 1
     [[menu.oem]]
-        identifier = "api_reference"
-        title = "Core API Reference"
+        identifier = "portal_api_reference"
+        title = "Vector Charts Portal"
         pre = "<span class='bp3-icon bp3-icon-code'></span>"
         weight = 2
     [[menu.oem]]
-        identifier = "portal_api_reference"
-        title = "Portal API Reference"
+        identifier = "api_reference"
+        title = "Vector Charts Core"
         pre = "<span class='bp3-icon bp3-icon-code'></span>"
         weight = 3
     [[menu.oem]]

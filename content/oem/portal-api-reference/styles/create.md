@@ -17,7 +17,7 @@ Content-Type: application/json
 }` response=`Status Code: 200 OK
 Response Body:
 {
-    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "id": 42,
     "name": "Vessel Map",
     "userEmail": "example@zydromarine.com",
     "createdAt": 1736942400000,
