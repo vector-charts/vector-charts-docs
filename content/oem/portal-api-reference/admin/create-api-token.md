@@ -1,5 +1,5 @@
 ---
-title: "Create Account API Token"
+title: "Create API Token For User"
 weight: 13
 menu:
   oem:
@@ -7,7 +7,7 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 ---
 
-{{% apiEndpointCard method="POST" path="/api/portal/v1/admin/createApiToken" title="Create Account API Token" request=`POST https://<your-host>:9909/api/portal/v1/admin/createApiToken
+{{% apiEndpointCard method="POST" path="/api/portal/v1/admin/createApiToken" title="Create API Token For User" request=`POST https://<your-host>:9909/api/portal/v1/admin/createApiToken
 Authorization: Bearer <token>
 Content-Type: application/json
 

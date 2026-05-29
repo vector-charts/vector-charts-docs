@@ -13,12 +13,12 @@ Content-Type: application/json
 
 {
     "id": 42,
-    "name": "Acme Marine Ltd."
+    "name": "Zydro Marine Inc"
 }` response=`Status Code: 200 OK
 Response Body:
 {
     "id": 42,
-    "name": "Acme Marine Ltd.",
+    "name": "Zydro Marine Inc",
     "planInstance": "oem",
     "metadata": {},
     "createdAt": 1736942400000

@@ -12,7 +12,7 @@ Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 {
     "id": 42,
-    "name": "Acme Marine",
+    "name": "Zydro Marine",
     "planInstance": "oem",
     "metadata": {},
     "createdAt": 1736942400000

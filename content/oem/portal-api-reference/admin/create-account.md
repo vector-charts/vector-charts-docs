@@ -12,15 +12,15 @@ Authorization: Bearer <token>
 Content-Type: application/json
 
 {
-    "name": "Acme Marine",
-    "username": "owner@acme-marine.com",
+    "name": "Zydro Marine",
+    "username": "owner@zydromarine.com",
     "password": "a-strong-password"
 }` response=`Status Code: 200 OK
 Response Body:
 {
     "account": {
         "id": 42,
-        "name": "Acme Marine",
+        "name": "Zydro Marine",
         "planInstance": "oem",
         "metadata": {},
         "createdAt": 1736942400000
@@ -28,7 +28,7 @@ Response Body:
     "user": {
         "id": 7,
         "accountId": 42,
-        "email": "owner@acme-marine.com",
+        "email": "owner@zydromarine.com",
         "isAdmin": false,
         "createdAt": 1736942400000
     },
@@ -37,7 +37,7 @@ Response Body:
         "name": "Default",
         "userId": 7,
         "accountId": 42,
-        "userEmail": "owner@acme-marine.com",
+        "userEmail": "owner@zydromarine.com",
         "createdAt": 1736942400000,
         "lastUsedAt": null,
         "restrictions": null
@@ -66,7 +66,7 @@ On success, the endpoint returns the new account, its primary user, and a defaul
 
 - `account`: The newly created account record. See [Get Account](/oem/portal-api-reference/admin/get-account/) for the field descriptions.
 - `user`: The primary user created on the account. See [Get User](/oem/portal-api-reference/admin/get-user/) for the field descriptions.
-- `initialToken`: The default API token minted for the primary user. The `id` field is the bearer string. See [Create Account API Token](/oem/portal-api-reference/admin/create-api-token/) for the full schema.
+- `initialToken`: The default API token minted for the primary user. The `id` field is the bearer string. See [Create API Token For User](/oem/portal-api-reference/admin/create-api-token/) for the full schema.
 
 <b>Error Responses</b>
 

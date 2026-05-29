@@ -46,7 +46,7 @@ The endpoint returns an array of API token records.
 - `userEmail`: The email of the user the token belongs to.
 - `createdAt`: Timestamp when the token was created, in milliseconds since unix epoch.
 - `lastUsedAt`: Timestamp of the most recent request authenticated by this token, in milliseconds since unix epoch. `null` if the token has never been used.
-- `restrictions`: An object describing limits on how the token can be used, or `null` if unrestricted. See [Create Account API Token](/oem/portal-api-reference/admin/create-api-token/) for the full schema.
+- `restrictions`: An object describing limits on how the token can be used, or `null` if unrestricted. See [Create API Token For User](/oem/portal-api-reference/admin/create-api-token/) for the full schema.
 
 <b>Error Responses</b>
 

@@ -45,4 +45,4 @@ Deleting a user or an account is asynchronous. The Portal API returns a `jobId` 
 ### API Tokens
 
 - [List Account API Tokens](/oem/portal-api-reference/admin/list-api-tokens/)
-- [Create Account API Token](/oem/portal-api-reference/admin/create-api-token/)
+- [Create API Token For User](/oem/portal-api-reference/admin/create-api-token/)

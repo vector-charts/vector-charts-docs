@@ -58,7 +58,7 @@ The request body should be JSON-encoded.
 On success, the endpoint returns the new user and its default API token.
 
 - `user`: The newly created user record. See [Get User](/oem/portal-api-reference/admin/get-user/) for the field descriptions.
-- `initialToken`: The default API token minted for the new user. The `id` field is the bearer string. See [Create Account API Token](/oem/portal-api-reference/admin/create-api-token/) for the full schema.
+- `initialToken`: The default API token minted for the new user. The `id` field is the bearer string. See [Create API Token For User](/oem/portal-api-reference/admin/create-api-token/) for the full schema.
 
 <b>Error Responses</b>
 
