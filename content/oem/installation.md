@@ -47,7 +47,7 @@ For example, at the point of writing this documentation the current version is
 
 `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.4.1-ba68d44-x86_64`.
 
-Versions are publicized by the Vector Charts team with OEM customers, in tandem with our release notes.
+Versions are publicized by the Vector Charts team with OEM customers, in tandem with our release notes. Please see [Changelog](/oem/changelog/) for all recent release notes and tagged release versions. 
 
 To pull a release of our OEM image:
 
