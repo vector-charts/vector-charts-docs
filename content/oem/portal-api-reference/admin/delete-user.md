@@ -17,7 +17,7 @@ Content-Type: application/json
 Response Body:
 {
     "deletedUserId": 7,
-    "jobId": 31
+    "jobId": "5e37b9c1-a4c2-4b8e-9f3a-72d3f4a5b8e1"
 }` %}}
 
 Delete a user. A background job is enqueued to remove the user's data and record from the chart instance; the deletion completes asynchronously. Track the job through the [Jobs](/oem/portal-api-reference/jobs/) endpoints.
