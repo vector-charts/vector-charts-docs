@@ -21,8 +21,8 @@ Response Body:
         "userId": 1
     },
     "user": {
-        "id": 1,
-        "email": "admin",
+        "userId": 1,
+        "username": "admin",
         "isAdmin": true,
         "isAccountOwner": false,
         "account": {
@@ -49,8 +49,8 @@ On success, the endpoint returns the new session token and the authenticated use
 
 - `token.id`: The bearer token string. Send this in the `Authorization` header on subsequent requests.
 - `token.userId`: The ID of the user the token was issued to.
-- `user.id`: The user's unique identifier.
-- `user.email`: The user's email address.
+- `user.userId`: The user's unique identifier.
+- `user.username`: The user's login username.
 - `user.isAdmin`: `true` if the user has administrator privileges on this OEM instance, otherwise `false`. Administrators have elevated privileges and have access to management endpoints under [Users & Team](/oem/portal-api-reference/).
 - `user.isAccountOwner`: `true` if the user is the owner of the account, otherwise `false`.
 - `user.account.id`: The ID of the account the user belongs to.

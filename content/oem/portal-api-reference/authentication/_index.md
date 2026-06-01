@@ -38,8 +38,8 @@ The response includes a `token` object whose `id` field is the bearer string:
         "userId": 1
     },
     "user": {
-        "id": 1,
-        "email": "admin",
+        "userId": 1,
+        "username": "admin",
         "isAdmin": true,
         "isAccountOwner": false,
         "account": {

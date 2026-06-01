@@ -11,8 +11,8 @@ menu:
 Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 {
-    "id": 1,
-    "email": "admin",
+    "userId": 1,
+    "username": "admin",
     "isAdmin": true,
     "isAccountOwner": false,
     "account": {
@@ -33,8 +33,8 @@ This endpoint requires a Bearer token in the `Authorization` header.
 
 The endpoint returns the authenticated user record.
 
-- `id`: The user's unique identifier.
-- `email`: The user's email address.
+- `userId`: The user's unique identifier.
+- `username`: The user's login username.
 - `isAdmin`: `true` if the user has administrator privileges on this OEM instance, otherwise `false`. Administrators have elevated privileges and have access to management endpoints under [Users & Team](/oem/portal-api-reference/).
 - `isAccountOwner`: `true` if the user is the owner of the account, otherwise `false`.
 - `account.id`: The ID of the account the user belongs to.
