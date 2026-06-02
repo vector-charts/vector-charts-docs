@@ -102,3 +102,7 @@ services:
 volumes:
     vector-charts-oem-data:
 </pre>
+
+## More Examples
+
+For more deployment examples, see [https://github.com/vector-charts/vector-charts-oem-examples](https://github.com/vector-charts/vector-charts-oem-examples).
