@@ -16,7 +16,7 @@ Content-Type: application/json
 }` response=`Status Code: 200 OK
 Response Body:
 {
-    "jobId": 32
+    "jobId": "5e37b9c1-a4c2-4b8e-9f3a-72d3f4a5b8e1"
 }` %}}
 
 Delete an account. A background job is enqueued to remove the account, all of its users, and their data from the chart instance; the deletion completes asynchronously. Track the job through the [Jobs](/oem/portal-api-reference/jobs/) endpoints.
