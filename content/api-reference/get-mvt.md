@@ -16,6 +16,7 @@ This URL should be used as the base style.
 
 - **token** <span style="color:red;">(Required)</span>: Vector Charts API token.
 - **styleId**: Identifier for a custom style.
+- **styleName**: Identifier for a custom style (Finds the style by name)
 - **theme**: Set to `day`, `dusk` or `night` to change color schemes.
 - **depthLimit**: Sets the safety contour value in meters.
 - **depthUnits**: Sets the units for depth soundings: `meters`, `feet`, or `fathoms` are valid.

@@ -21,6 +21,7 @@ This endpoint accepts a Bearer token in the `Authorization` header or a `token` 
 <b>Query Parameters</b>
 
 - **styleId** (Optional): Identifier of a custom style created via the [Portal API](/oem/portal-api-reference/styles/). When set, the style's saved colors and settings override the defaults.
+- **styleName**: (Optional): Identifier of a custom style. Same as `styleId` but searches for a style by name.
 - **theme** (Optional): Color palette. One of `day`, `dusk`, or `night`. Defaults to `day`.
 - **depthLimit** (Optional): Safety contour value. Areas shallower than this are shaded distinctly. Defaults to `3`.
 - **depthUnits** (Optional): Units for depth soundings. One of `meters`, `feet`, or `fathoms`. Defaults to `meters`.
