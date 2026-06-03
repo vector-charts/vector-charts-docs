@@ -32,7 +32,6 @@ Deleting a user or an account is asynchronous. The Portal API returns a `jobId` 
 - [Create User](/oem/portal-api-reference/admin/create-user/)
 - [Edit User](/oem/portal-api-reference/admin/edit-user/)
 - [Delete User](/oem/portal-api-reference/admin/delete-user/)
-- [Impersonate User](/oem/portal-api-reference/admin/impersonate-user/)
 
 ### Accounts
 
