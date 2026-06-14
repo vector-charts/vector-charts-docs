@@ -9,6 +9,18 @@ menu:
 
 _History of latest OEM releases._
 
+## Version 0.5.3
+_Released June 12th, 2026_
+
+- x86_64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.5.3-5907a55-x86_64`
+- aarch64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.5.3-5907a55-aarch64`
+
+Improvements to S-63 encrypted chart features and admin functionality.
+
+- Improved support for S-63 exchange sets from SevenCs/ChartWorld
+- Added internal development flags to support S-63 debugging
+- Added admin page to edit accounts/users globally for an OEM instance
+
 ## Version 0.5.0
 _Released June 2nd, 2026_
 
