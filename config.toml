@@ -21,12 +21,12 @@ unsafe = true
         weight = 1
     [[menu.main]]
         identifier = "api_reference"
-        title = "Core API Reference"
+        title = "Core API"
         pre = "<span class='bp3-icon bp3-icon-code'></span>"
         weight = 2
     [[menu.main]]
         identifier = "chart_api_reference"
-        title = "Chart API Reference"
+        title = "Chart API"
         pre = "<span class='bp3-icon bp3-icon-map'></span>"
         weight = 3
     [[menu.main]]
@@ -41,16 +41,26 @@ unsafe = true
         weight = 1
     [[menu.oem]]
         identifier = "portal_api_reference"
-        title = "Vector Charts Portal"
+        title = "Admin API"
         pre = "<span class='bp3-icon bp3-icon-code'></span>"
         weight = 2
     [[menu.oem]]
         identifier = "api_reference"
-        title = "Vector Charts Core"
+        title = "Core API"
         pre = "<span class='bp3-icon bp3-icon-code'></span>"
         weight = 3
     [[menu.oem]]
         identifier = "examples"
         title = "Examples"
         pre = "<span class='bp3-icon bp3-icon-learning'></span>"
-        weight = 3
+        weight = 4
+    [[menu.crowdsourced]]
+        identifier = "getting_started"
+        title = "Getting Started"
+        pre = "<span class='bp3-icon bp3-icon-learning'></span>"
+        weight = 1
+    [[menu.crowdsourced]]
+        identifier = "user_report_api_reference"
+        title = "User Report API"
+        pre = "<span class='bp3-icon bp3-icon-code'></span>"
+        weight = 2

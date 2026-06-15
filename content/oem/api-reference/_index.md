@@ -44,3 +44,5 @@ const map = new mapboxgl.Map({
     style: "https://&lt;your-host&gt;:9909/api/v1/styles/base.json?token=&lt;token string&gt;"
 });
 </pre>
+
+Crowdsourced user reports and realtime event streaming are documented in the [Crowdsourced Data](/crowdsourced-data/) section.
