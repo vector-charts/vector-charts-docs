@@ -1,6 +1,6 @@
 ---
 title: "Delete User Report"
-weight: 6
+weight: 7
 menu:
   crowdsourced:
     parent: "user_report_api_reference"
@@ -13,22 +13,20 @@ Response Body:
 {
     "id": "550e8400-e29b-41d4-a716-446655440000",
     "reportType": "hazard",
-    "position": {
-        "latitude": 42.36,
-        "longitude": -71.05
-    },
+    "latitude": 42.36,
+    "longitude": -71.05,
     "properties": {},
     "validVoteCount": 3,
     "invalidVoteCount": 1,
     "externalUserId": "app-user-abc123",
+    "namespace": "public",
     "createdAt": 1718380800000,
     "updatedAt": 1718381100000,
-    "expiresAt": 1718467200000,
-    "isExpired": false,
-    "isDeleted": true
+    "expiredAt": null,
+    "deletedAt": 1718381100000
 }` %}}
 
-Soft-delete a user report. The report remains in the database but is marked `isDeleted: true` and excluded from default list and tile queries.
+Soft-delete a user report. The report remains in the database with `deletedAt` set and is excluded from default list and tile queries.
 
 <b>Authentication</b>
 

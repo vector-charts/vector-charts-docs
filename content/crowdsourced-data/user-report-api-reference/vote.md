@@ -1,6 +1,6 @@
 ---
 title: "Vote on User Report"
-weight: 5
+weight: 6
 menu:
   crowdsourced:
     parent: "user_report_api_reference"
@@ -19,19 +19,17 @@ Response Body:
 {
     "id": "550e8400-e29b-41d4-a716-446655440000",
     "reportType": "hazard",
-    "position": {
-        "latitude": 42.36,
-        "longitude": -71.05
-    },
+    "latitude": 42.36,
+    "longitude": -71.05,
     "properties": {},
     "validVoteCount": 4,
     "invalidVoteCount": 1,
     "externalUserId": "app-user-abc123",
+    "namespace": "public",
     "createdAt": 1718380800000,
     "updatedAt": 1718381000000,
-    "expiresAt": 1718467200000,
-    "isExpired": false,
-    "isDeleted": false
+    "expiredAt": null,
+    "deletedAt": null
 }` %}}
 
 Vote that a user report is valid or invalid. Each authenticated user may have at most one vote per report; submitting again updates the existing vote.

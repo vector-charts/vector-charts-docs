@@ -27,21 +27,19 @@ Response Body:
 {
     "id": "550e8400-e29b-41d4-a716-446655440000",
     "reportType": "hazard",
-    "position": {
-        "latitude": 42.36,
-        "longitude": -71.05
-    },
+    "latitude": 42.36,
+    "longitude": -71.05,
     "properties": {
         "description": "Shallow area reported"
     },
     "validVoteCount": 0,
     "invalidVoteCount": 0,
     "externalUserId": "app-user-abc123",
+    "namespace": "public",
     "createdAt": 1718380800000,
     "updatedAt": 1718380800000,
-    "expiresAt": 1718467200000,
-    "isExpired": false,
-    "isDeleted": false
+    "expiredAt": null,
+    "deletedAt": null
 }` %}}
 
 Create a new crowdsourced user report at the given position.
@@ -56,7 +54,7 @@ Cloud: `https://api.vectorcharts.com` — OEM: `https://&lt;your-host&gt;:9909`
 
 <b>Request Body</b>
 
-- **reportType** <span style="color:red;">(Required)</span>: One of `data_quality`, `hazard`, `incident`, `closure`, or `sos`.
+- **reportType** <span style="color:red;">(Required)</span>: Category string.
 - **position** <span style="color:red;">(Required)</span>: Object with `latitude` and `longitude` (WGS84 decimal degrees).
 - **id** (Optional): Client-supplied UUID version 4. When omitted, the server assigns one. Useful for offline-first clients that pre-generate IDs before sync.
 - **properties** (Optional): Arbitrary JSON metadata (for example, a description or heading).

@@ -1,5 +1,5 @@
 ---
-title: "Get User Reports Tile"
+title: "Get User Reports Tile (GeoJSON)"
 weight: 4
 menu:
   crowdsourced:
@@ -21,15 +21,17 @@ Response Body:
             "properties": {
                 "id": "550e8400-e29b-41d4-a716-446655440000",
                 "reportType": "hazard",
+                "latitude": 42.36,
+                "longitude": -71.05,
                 "properties": {},
                 "validVoteCount": 3,
                 "invalidVoteCount": 1,
                 "externalUserId": "app-user-abc123",
+                "namespace": "public",
                 "createdAt": 1718380800000,
                 "updatedAt": 1718380900000,
-                "expiresAt": 1718467200000,
-                "isExpired": false,
-                "isDeleted": false
+                "expiredAt": null,
+                "deletedAt": null
             }
         }
     ]

@@ -12,32 +12,29 @@ Crowdsourced user reports are spatially-defined suggestions about chart data sub
 
 Reports are scoped to a server-configured **namespace** (default `public`). Only reports in the configured namespace are visible via the API, included in streaming events, and replicated between peers. Peer instances must use the same namespace to exchange data.
 
-Reports are global within a namespace: any authenticated user can list reports, fetch tile GeoJSON, vote, and receive streaming updates. Reports expire automatically after a server-configured TTL (default 24 hours) but remain stored in the database with an `isExpired` flag.
+Reports expire automatically after a server-configured age (default 24 hours). Expired reports have `expiredAt` set and remain in the database.
 
 These endpoints are available on both [Vector Charts Cloud](https://api.vectorcharts.com) and Vector Charts OEM. Replace the host in examples with your deployment's base URL.
 
 ## Report Types
 
-- `data_quality` — Data quality issue
-- `hazard` — Navigation hazard
-- `incident` — Incident
-- `closure` — Closure or restriction
-- `sos` — SOS / distress
+Common examples include `data_quality`, `hazard`, `incident`, `closure`, and `sos`. The server does not enforce a fixed list.
 
 ## Report Object
 
 REST endpoints return a report object with these fields:
 
 - **id**: UUID version 4
-- **reportType**: One of the report types above
-- **position**: `{ latitude, longitude }` in WGS84 decimal degrees
+- **reportType**: Free-form string label for the report category
+- **latitude** / **longitude**: WGS84 decimal degrees
 - **properties**: Arbitrary JSON metadata
 - **validVoteCount** / **invalidVoteCount**: Aggregated vote totals
 - **externalUserId**: Optional opaque client user identifier
 - **createdAt** / **updatedAt**: Milliseconds since Unix epoch
-- **expiresAt**: Expiration timestamp
-- **isExpired** / **isDeleted**: Lifecycle flags
+- **expiredAt** / **deletedAt**: Null when active; set when expired or soft-deleted
 - **namespace**: Namespace this report belongs to (matches server config)
+
+For Mapbox vector tiles (recommended for map styles), see [Get User Reports MVT Tile](/crowdsourced-data/user-report-api-reference/tile-mvt/).
 
 ## Authentication
 

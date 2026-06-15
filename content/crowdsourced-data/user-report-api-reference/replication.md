@@ -55,4 +55,4 @@ Replicated writes do not trigger WebSocket events on the receiving instance.
 
 ## Cursor Tracking
 
-Each peer's last successfully ingested timestamp is stored in the `user_report_replication_cursors` table. If a peer pull fails, the cursor is not advanced and the next tick retries from the last successful position.
+Each peer's last successfully ingested timestamp is stored in the `user_report_replication_peers` table. If a peer pull fails, the cursor is not advanced and the next tick retries from the last successful position.
