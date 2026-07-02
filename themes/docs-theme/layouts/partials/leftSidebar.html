@@ -1,12 +1,15 @@
 <div id="contentLeftSidebar">
     <div class="stickyTableOfContents">
-		{{ $currentPage := . }}
-		{{ $menu := .Site.Menus.main }}
-		{{ $menuName := "main" }}
-		{{ if eq $currentPage.Section "oem" }}
-			{{ $menu = .Site.Menus.oem }}
-			{{ $menuName = "oem" }}
-		{{ end }}
+    {{ $currentPage := . }}
+    {{ $menu := .Site.Menus.main }}
+    {{ $menuName := "main" }}
+    {{ if eq $currentPage.Section "oem" }}
+        {{ $menu = .Site.Menus.oem }}
+        {{ $menuName = "oem" }}
+    {{ else if eq $currentPage.Section "crowdsourced-data" }}
+        {{ $menu = .Site.Menus.crowdsourced }}
+        {{ $menuName = "crowdsourced" }}
+    {{ end }}
 
 		{{ range $menu }}
 			{{ if .HasChildren }}

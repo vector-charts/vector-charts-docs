@@ -54,3 +54,13 @@ unsafe = true
         title = "Examples"
         pre = "<span class='bp3-icon bp3-icon-learning'></span>"
         weight = 4
+    [[menu.crowdsourced]]
+        identifier = "getting_started"
+        title = "Getting Started"
+        pre = "<span class='bp3-icon bp3-icon-learning'></span>"
+        weight = 1
+    [[menu.crowdsourced]]
+        identifier = "user_report_api_reference"
+        title = "User Report API"
+        pre = "<span class='bp3-icon bp3-icon-code'></span>"
+        weight = 2

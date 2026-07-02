@@ -5,14 +5,18 @@
     {{ if eq $currentPage.Section "oem" }}
         {{ $menu = .Site.Menus.oem }}
         {{ $menuName = "oem" }}
+    {{ else if eq $currentPage.Section "crowdsourced-data" }}
+        {{ $menu = .Site.Menus.crowdsourced }}
+        {{ $menuName = "crowdsourced" }}
     {{ end }}
 
     <section class="noJsHidden">
         <div class="mobileHeaderFlexContainer">
             <div class="bp3-select bp3-minimal mobileSidebarNavDropdown">
                 <select onchange="window.location.replace(this.options[this.selectedIndex].value)">
-                    <option value="/" {{ if not (eq .Page.Section "oem") }}selected{{end}}>Vector Charts Cloud</option>
+                    <option value="/" {{ if and (not (eq .Page.Section "oem")) (not (eq .Page.Section "crowdsourced-data")) }}selected{{end}}>Vector Charts Cloud</option>
                     <option value="/oem/" {{ if eq .Page.Section "oem" }}selected{{end}}>Vector Charts OEM</option>
+                    <option value="/crowdsourced-data/" {{ if eq .Page.Section "crowdsourced-data" }}selected{{end}}>Crowdsourced Data</option>
                 </select>
             </div>
             <div class="secondaryHeaderSectionDivider"></div>
