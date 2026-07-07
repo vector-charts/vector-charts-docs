@@ -12,7 +12,7 @@
 			{{ if .HasChildren }}
 				<div class="sidebarMenuSection">{{ .Pre }}{{ .Title }}</div>
 				{{ range .Children }}
-					<a href="{{ .URL }}" class="sidebarItemHref">
+					<a href="{{ .URL }}" class="sidebarItemHref{{ if strings.HasPrefix .URL "http" }} sidebarItemHrefExternal{{ end }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
 						<div
 							class="sidebarMenuItem {{if ($currentPage.IsMenuCurrent $menuName .)}}sidebarMenuItemSelected{{end}}">
 							<div class="buttonText">{{ .Pre }}{{ .Title }}{{ .Post }}
@@ -30,7 +30,7 @@
 					{{if  .HasChildren }}
 						<div class="sidebarMenuChildrenExpandable">
 							{{ range .Children }}
-								<a href="{{ .URL }}" class="sidebarItemHref">
+								<a href="{{ .URL }}" class="sidebarItemHref{{ if strings.HasPrefix .URL "http" }} sidebarItemHrefExternal{{ end }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
 									<div
 										class="sidebarMenuItem {{if ($currentPage.IsMenuCurrent $menuName .)}}sidebarMenuItemSelected{{end}}">
 										<div class="buttonText">{{ .Pre }}{{ .Title }}{{ .Post }}</div>
