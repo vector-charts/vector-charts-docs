@@ -34,6 +34,11 @@ unsafe = true
         title = "Examples"
         pre = "<span class='bp3-icon bp3-icon-learning'></span>"
         weight = 4
+    [[menu.main]]
+        identifier = "resources"
+        title = "Resources"
+        pre = "<span class='bp3-icon bp3-icon-document'></span>"
+        weight = 5
     [[menu.oem]]
         identifier = "getting_started"
         title = "Getting Started"
@@ -54,15 +59,20 @@ unsafe = true
         title = "Examples"
         pre = "<span class='bp3-icon bp3-icon-learning'></span>"
         weight = 4
+    [[menu.oem]]
+        identifier = "resources"
+        title = "Resources"
+        pre = "<span class='bp3-icon bp3-icon-document'></span>"
+        weight = 5
     [[menu.main]]
-        parent = "changelog"
+        parent = "resources"
         title = "Symbol Browser"
         url = "https://symbology-docs.vectorcharts.com/"
-        weight = 100
+        weight = 2
         post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
     [[menu.oem]]
-        parent = "changelog"
+        parent = "resources"
         title = "Symbol Browser"
         url = "https://symbology-docs.vectorcharts.com/"
-        weight = 100
+        weight = 2
         post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"

@@ -3,8 +3,8 @@ title: "Vector Charts Cloud Changelog"
 menu:
   main:
     title: "Changelog"
-    parent: "changelog"
-    weight: 99
+    parent: "resources"
+    weight: 1
 ---
 
 _History of updates to the Vector Charts cloud service._
