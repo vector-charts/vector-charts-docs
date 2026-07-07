@@ -104,6 +104,15 @@
     top: 5px;
 }
 
+.sidebarMenuItem .sidebarExternalIcon {
+    opacity: 0.55;
+    font-size: 12px;
+}
+
+.sidebarItemHrefExternal:hover .sidebarExternalIcon {
+    opacity: 0.85;
+}
+
 .sidebarItemHref:hover {
     text-decoration: none;
 }

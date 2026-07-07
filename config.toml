@@ -54,3 +54,15 @@ unsafe = true
         title = "Examples"
         pre = "<span class='bp3-icon bp3-icon-learning'></span>"
         weight = 4
+    [[menu.main]]
+        parent = "changelog"
+        title = "Symbol Browser"
+        url = "https://symbology-docs.vectorcharts.com/"
+        weight = 100
+        post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
+    [[menu.oem]]
+        parent = "changelog"
+        title = "Symbol Browser"
+        url = "https://symbology-docs.vectorcharts.com/"
+        weight = 100
+        post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
