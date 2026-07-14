@@ -9,6 +9,18 @@ menu:
 
 _History of latest OEM releases._
 
+## Version 0.5.5
+_Released July 7th, 2026_
+
+- x86_64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.5.5-7581d02-x86_64`
+- aarch64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.5.5-7581d02-aarch64`
+
+Improvements to OEM licensing, bugfixes to chart cache, UI tweaks.
+
+- Improved OEM license validation to better persist across Docker container restarts
+- Fixed bug where deleting overlapping S-63 cells could leave outdated tiles in cache
+- Improved the display of some jobs in the Admin dashboard
+
 ## Version 0.5.3
 _Released June 12th, 2026_
 
