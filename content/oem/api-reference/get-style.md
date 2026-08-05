@@ -32,7 +32,8 @@ This endpoint accepts a Bearer token in the `Authorization` header or a `token` 
 - **showOverscale** (Optional): Show an indication when the map is zoomed in beyond the source data's resolution. Defaults to `true`.
 - **showNoData** (Optional): Show an indication where there is no ENC data. Defaults to `true`.
 - **showSatellite** (Optional): Render a satellite imagery basemap underneath the chart. Defaults to `false`.
-- **maskLandAreas** (Optional): When `showSatellite` is enabled, mask land areas with a flat fill so the chart symbology stays legible. Defaults to `false`.
+- **maskLandAreas** (Optional): When `showSatellite` is enabled, removes the basemap's flat land fill so satellite imagery shows through on land outside charted coverage. Defaults to `false`.
+- **satelliteTileUrl** (Optional): Raster tile URL template to use for the satellite basemap instead of the built-in imagery source, e.g. from Mapbox or another provider. Must be a URL-encoded string containing `{z}`, `{x}`, and `{y}` placeholders. Only used when `showSatellite` is `true`.
 - **hideLayers** (Optional): Comma-separated list of style layer IDs to hide.
 - **showLayers** (Optional): Comma-separated list of style layer IDs to show. When set, all other layers are hidden.
 - **glyphs** (Optional): Override the glyphs (fonts) URL used by the style. Must be URL-encoded.

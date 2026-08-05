@@ -24,6 +24,9 @@ This URL should be used as the base style.
 - **showPlaceNames**: Show names of landmarks & built-up areas. Defaults to `true`.
 - **showOverscale**: Show an indication when the map is zoomed in too far. Defaults to `true`.
 - **showNoData**: Show an indication where there is no ENC data. Defaults to `true`.
+- **showSatellite**: Render a satellite imagery basemap underneath the chart. Defaults to `false`.
+- **maskLandAreas**: When `showSatellite` is enabled, removes the basemap's flat land fill so satellite imagery shows through on land outside charted coverage. Defaults to `false`.
+- **satelliteTileUrl**: Raster tile URL template to use for the satellite basemap instead of the built-in imagery source, e.g. from Mapbox or another provider. Must be a URL-encoded string containing `{z}`, `{x}`, and `{y}` placeholders. Only used when `showSatellite` is `true`.
 - **roundOffSoundings**: Round soundings to the nearest (localized) whole number. Defaults to `false`.
 - **showLightSectors**: Toggle the visibility of lighthouse sector visualization. Defaults to `true`.
 - **glyphs**: Override the glyphs (fonts) for the style with another URL. Must be a URL-encoded string.
