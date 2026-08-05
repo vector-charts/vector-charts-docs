@@ -9,6 +9,19 @@ menu:
 
 _History of latest OEM releases._
 
+## Version 0.6.5
+_Released August 4th, 2026_
+
+- x86_64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.6.5-5595cdc-x86_64`
+- aarch64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.6.5-5595cdc-aarch64`
+
+Major performance improvements to tile rendering.
+
+- Significantly improved tile renderer performance, including faster tile API response times
+- Simplified chart rendering at low zoom levels for clearer, more efficient map views
+- Improved S-63 permit renewal when updating permit files
+- Improved reliability of S-63 chart updates when re-uploading cells
+
 ## Version 0.5.5
 _Released July 7th, 2026_
 
