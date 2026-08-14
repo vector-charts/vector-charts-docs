@@ -1,10 +1,6 @@
 ---
 title: "Vote on Report"
 weight: 3
-menu:
-  crowdsourced:
-    parent: "user_report_api_reference"
-    pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 ---
 
 {{% apiEndpointCard method="POST" path="/api/v1/user-reports/{id}/votes" title="Vote on Report" request=`POST https://api.vectorcharts.com/api/v1/user-reports/550e8400-e29b-41d4-a716-446655440000/votes
@@ -52,7 +48,7 @@ Requires a Bearer token in the `Authorization` header or a `token` query paramet
 
 <b>Response</b>
 
-Returns the updated [User Report](/crowdsourced-data/user-report-api-reference/) object with refreshed `upvoteCount` / `downvoteCount`. Individual vote rows are not returned.
+Returns the updated [User Report]({{< relref "_index.md" >}}) object with refreshed `upvoteCount` / `downvoteCount`. Individual vote rows are not returned.
 
 <b>Error Responses</b>
 

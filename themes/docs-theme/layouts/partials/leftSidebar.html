@@ -1,26 +1,29 @@
 <div id="contentLeftSidebar">
     <div class="stickyTableOfContents">
     {{ $currentPage := . }}
+    {{ $currentURL := .RelPermalink }}
     {{ $menu := .Site.Menus.main }}
     {{ $menuName := "main" }}
     {{ if eq $currentPage.Section "oem" }}
         {{ $menu = .Site.Menus.oem }}
         {{ $menuName = "oem" }}
-    {{ else if eq $currentPage.Section "crowdsourced-data" }}
-        {{ $menu = .Site.Menus.crowdsourced }}
-        {{ $menuName = "crowdsourced" }}
     {{ end }}
 
 		{{ range $menu }}
 			{{ if .HasChildren }}
 				<div class="sidebarMenuSection">{{ .Pre }}{{ .Title }}</div>
 				{{ range .Children }}
+					{{ $isCurrent := or ($currentPage.IsMenuCurrent $menuName .) (eq .URL $currentURL) }}
+					{{ $hasCurrent := $currentPage.HasMenuCurrent $menuName . }}
+					{{ range .Children }}
+						{{ if eq .URL $currentURL }}{{ $hasCurrent = true }}{{ end }}
+					{{ end }}
 					<a href="{{ .URL }}" class="sidebarItemHref{{ if strings.HasPrefix .URL "http" }} sidebarItemHrefExternal{{ end }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
 						<div
-							class="sidebarMenuItem {{if ($currentPage.IsMenuCurrent $menuName .)}}sidebarMenuItemSelected{{end}}">
+							class="sidebarMenuItem {{if $isCurrent}}sidebarMenuItemSelected{{end}}">
 							<div class="buttonText">{{ .Pre }}{{ .Title }}{{ .Post }}
 								{{if  .HasChildren }}
-								{{if or ($currentPage.IsMenuCurrent $menuName .) ($currentPage.HasMenuCurrent $menuName .)}}
+								{{if or $isCurrent $hasCurrent}}
 								<span class="bp3-icon bp3-icon-chevron-down"></span>
 								{{ else }}
 								<span class="bp3-icon bp3-icon-chevron-right"></span>
@@ -29,13 +32,13 @@
 							</div>
 						</div>
 					</a>
-					{{if or ($currentPage.IsMenuCurrent $menuName .) ($currentPage.HasMenuCurrent $menuName .)}}
+					{{if or $isCurrent $hasCurrent}}
 					{{if  .HasChildren }}
 						<div class="sidebarMenuChildrenExpandable">
 							{{ range .Children }}
 								<a href="{{ .URL }}" class="sidebarItemHref{{ if strings.HasPrefix .URL "http" }} sidebarItemHrefExternal{{ end }}"{{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
 									<div
-										class="sidebarMenuItem {{if ($currentPage.IsMenuCurrent $menuName .)}}sidebarMenuItemSelected{{end}}">
+										class="sidebarMenuItem {{if or ($currentPage.IsMenuCurrent $menuName .) (eq .URL $currentURL)}}sidebarMenuItemSelected{{end}}">
 										<div class="buttonText">{{ .Pre }}{{ .Title }}{{ .Post }}</div>
 									</div>
 								</a>

@@ -4,7 +4,7 @@ weight: 5
 menu:
   oem:
     parent: "portal_api_reference_charts"
-    pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-danger\">DELETE</div>"
+    pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-warning\">DELETE</div>"
 ---
 
 {{% apiEndpointCard method="DELETE" path="/api/portal/v1/charts/uploads/{id}" title="Delete Upload" request=`DELETE https://<your-host>:9909/api/portal/v1/charts/uploads/5

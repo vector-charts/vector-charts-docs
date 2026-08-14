@@ -30,15 +30,20 @@ unsafe = true
         pre = "<span class='bp3-icon bp3-icon-map'></span>"
         weight = 3
     [[menu.main]]
+        identifier = "user_report_api_reference"
+        title = "User Report API"
+        pre = "<span class='bp3-icon bp3-icon-warning-sign'></span>"
+        weight = 4
+    [[menu.main]]
         identifier = "examples"
         title = "Examples"
         pre = "<span class='bp3-icon bp3-icon-learning'></span>"
-        weight = 4
+        weight = 5
     [[menu.main]]
         identifier = "resources"
         title = "Resources"
         pre = "<span class='bp3-icon bp3-icon-document'></span>"
-        weight = 5
+        weight = 6
     [[menu.oem]]
         identifier = "getting_started"
         title = "Getting Started"
@@ -55,25 +60,20 @@ unsafe = true
         pre = "<span class='bp3-icon bp3-icon-code'></span>"
         weight = 3
     [[menu.oem]]
+        identifier = "user_report_api_reference"
+        title = "User Report API"
+        pre = "<span class='bp3-icon bp3-icon-warning-sign'></span>"
+        weight = 4
+    [[menu.oem]]
         identifier = "examples"
         title = "Examples"
         pre = "<span class='bp3-icon bp3-icon-learning'></span>"
-        weight = 4
+        weight = 5
     [[menu.oem]]
         identifier = "resources"
         title = "Resources"
         pre = "<span class='bp3-icon bp3-icon-document'></span>"
-        weight = 5
-    [[menu.crowdsourced]]
-        identifier = "getting_started"
-        title = "Getting Started"
-        pre = "<span class='bp3-icon bp3-icon-learning'></span>"
-        weight = 1
-    [[menu.crowdsourced]]
-        identifier = "user_report_api_reference"
-        title = "User Report API"
-        pre = "<span class='bp3-icon bp3-icon-code'></span>"
-        weight = 2
+        weight = 6
     [[menu.main]]
         parent = "resources"
         title = "Symbol Browser"
@@ -86,3 +86,117 @@ unsafe = true
         url = "https://symbology-docs.vectorcharts.com/"
         weight = 3
         post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
+
+    # Shared User Report API pages (Cloud + OEM URLs via content symlink).
+    # Identifiers must be unique site-wide or Hugo collapses entries.
+    [[menu.main]]
+        identifier = "ur_overview_cloud"
+        parent = "user_report_api_reference"
+        name = "Overview"
+        title = "Overview"
+        url = "/user-report-api-reference/"
+        weight = 1
+    [[menu.main]]
+        identifier = "ur_create_cloud"
+        parent = "user_report_api_reference"
+        name = "Create Report"
+        title = "Create Report"
+        url = "/user-report-api-reference/create/"
+        weight = 2
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
+    [[menu.main]]
+        identifier = "ur_vote_cloud"
+        parent = "user_report_api_reference"
+        name = "Vote on Report"
+        title = "Vote on Report"
+        url = "/user-report-api-reference/vote/"
+        weight = 3
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
+    [[menu.main]]
+        identifier = "ur_delete_cloud"
+        parent = "user_report_api_reference"
+        name = "Delete Report"
+        title = "Delete Report"
+        url = "/user-report-api-reference/delete/"
+        weight = 4
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-warning\">DELETE</div>"
+    [[menu.main]]
+        identifier = "ur_list_cloud"
+        parent = "user_report_api_reference"
+        name = "List Reports"
+        title = "List Reports"
+        url = "/user-report-api-reference/list/"
+        weight = 5
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
+    [[menu.main]]
+        identifier = "ur_mvt_cloud"
+        parent = "user_report_api_reference"
+        name = "Get Reports (MVT)"
+        title = "Get Reports (MVT)"
+        url = "/user-report-api-reference/tile-mvt/"
+        weight = 6
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
+    [[menu.main]]
+        identifier = "ur_geojson_cloud"
+        parent = "user_report_api_reference"
+        name = "Get Reports (GeoJSON)"
+        title = "Get Reports (GeoJSON)"
+        url = "/user-report-api-reference/tile-geojson/"
+        weight = 7
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
+
+    [[menu.oem]]
+        identifier = "ur_overview_oem"
+        parent = "user_report_api_reference"
+        name = "Overview"
+        title = "Overview"
+        url = "/oem/user-report-api-reference/"
+        weight = 1
+    [[menu.oem]]
+        identifier = "ur_create_oem"
+        parent = "user_report_api_reference"
+        name = "Create Report"
+        title = "Create Report"
+        url = "/oem/user-report-api-reference/create/"
+        weight = 2
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
+    [[menu.oem]]
+        identifier = "ur_vote_oem"
+        parent = "user_report_api_reference"
+        name = "Vote on Report"
+        title = "Vote on Report"
+        url = "/oem/user-report-api-reference/vote/"
+        weight = 3
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
+    [[menu.oem]]
+        identifier = "ur_delete_oem"
+        parent = "user_report_api_reference"
+        name = "Delete Report"
+        title = "Delete Report"
+        url = "/oem/user-report-api-reference/delete/"
+        weight = 4
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-warning\">DELETE</div>"
+    [[menu.oem]]
+        identifier = "ur_list_oem"
+        parent = "user_report_api_reference"
+        name = "List Reports"
+        title = "List Reports"
+        url = "/oem/user-report-api-reference/list/"
+        weight = 5
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
+    [[menu.oem]]
+        identifier = "ur_mvt_oem"
+        parent = "user_report_api_reference"
+        name = "Get Reports (MVT)"
+        title = "Get Reports (MVT)"
+        url = "/oem/user-report-api-reference/tile-mvt/"
+        weight = 6
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
+    [[menu.oem]]
+        identifier = "ur_geojson_oem"
+        parent = "user_report_api_reference"
+        name = "Get Reports (GeoJSON)"
+        title = "Get Reports (GeoJSON)"
+        url = "/oem/user-report-api-reference/tile-geojson/"
+        weight = 7
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"

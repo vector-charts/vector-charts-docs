@@ -1,10 +1,6 @@
 ---
 title: "Create Report"
 weight: 2
-menu:
-  crowdsourced:
-    parent: "user_report_api_reference"
-    pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 ---
 
 {{% apiEndpointCard method="POST" path="/api/v1/user-reports" title="Create Report" request=`POST https://api.vectorcharts.com/api/v1/user-reports
@@ -63,7 +59,7 @@ Cloud: `https://api.vectorcharts.com` — OEM: `https://<your-host>:9909`
 
 <b>Response Schema</b>
 
-Returns the created [User Report](/crowdsourced-data/user-report-api-reference/) object, including `isOwner: true` for the creating token.
+Returns the created [User Report]({{< relref "_index.md" >}}) object, including `isOwner: true` for the creating token.
 
 <b>Error Responses</b>
 

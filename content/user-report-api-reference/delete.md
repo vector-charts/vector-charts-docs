@@ -1,10 +1,6 @@
 ---
 title: "Delete Report"
 weight: 4
-menu:
-  crowdsourced:
-    parent: "user_report_api_reference"
-    pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-danger\">DELETE</div>"
 ---
 
 {{% apiEndpointCard method="DELETE" path="/api/v1/user-reports/{id}" title="Delete Report" request=`DELETE https://api.vectorcharts.com/api/v1/user-reports/550e8400-e29b-41d4-a716-446655440000
@@ -39,7 +35,7 @@ Requires a Bearer token. Only the user who created the report or an admin may de
 
 <b>Response</b>
 
-Returns the soft-deleted [User Report](/crowdsourced-data/user-report-api-reference/) object.
+Returns the soft-deleted [User Report]({{< relref "_index.md" >}}) object.
 
 <b>Error Responses</b>
 

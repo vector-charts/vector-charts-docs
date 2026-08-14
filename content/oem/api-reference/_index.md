@@ -45,4 +45,4 @@ const map = new mapboxgl.Map({
 });
 </pre>
 
-Crowdsourced user reports and realtime event streaming are documented in the [Crowdsourced Data](/crowdsourced-data/) section.
+User reports are documented in the [User Report API](/oem/user-report-api-reference/).

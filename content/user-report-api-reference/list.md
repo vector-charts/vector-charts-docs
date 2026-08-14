@@ -1,10 +1,6 @@
 ---
 title: "List Reports"
 weight: 5
-menu:
-  crowdsourced:
-    parent: "user_report_api_reference"
-    pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
 {{% apiEndpointCard method="GET" path="/api/v1/user-reports" title="List Reports" request=`GET https://api.vectorcharts.com/api/v1/user-reports?limit=50&offset=0
@@ -49,7 +45,7 @@ Requires a Bearer token in the `Authorization` header or a `token` query paramet
 
 <b>Response Schema</b>
 
-- **reports**: Array of [User Report](/crowdsourced-data/user-report-api-reference/) objects.
+- **reports**: Array of [User Report]({{< relref "_index.md" >}}) objects.
 - **total**: Total number of reports matching the filter.
 - **limit**: Applied page size.
 - **offset**: Applied offset.

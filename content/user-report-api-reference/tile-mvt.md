@@ -1,10 +1,6 @@
 ---
 title: "Get Reports (MVT)"
 weight: 6
-menu:
-  crowdsourced:
-    parent: "user_report_api_reference"
-    pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
 {{% apiEndpointCard method="GET" path="/api/v1/user-reports/tiles/{z}/{x}/{y}.mvt" title="Get Reports (MVT)" request=`GET https://api.vectorcharts.com/api/v1/user-reports/tiles/12/1240/1515.mvt?token=<token>` response=`Status Code: 200 OK
