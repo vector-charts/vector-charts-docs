@@ -71,17 +71,20 @@ Please see [Configuration](/oem/configuration/) for a detailed list of configura
 
 ## Run with Docker
 
-To start up a test instance with Docker, run:
+To start a test instance with Docker, run:
 
 <pre>
 docker run -d \
     --name vector-charts-oem \
+    --shm-size=256m \
     -p 9909:9909 \
     -e INITIAL_ADMIN_USERNAME=${INITIAL_ADMIN_USERNAME:-admin} \
     -e INITIAL_ADMIN_PASSWORD=${INITIAL_ADMIN_PASSWORD:-admin} \
     -e LICENSING_ORGANIZATION_ID=...your organization... \
     402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.4.1-ba68d44-x86_64
 </pre>
+
+We recommend that you include `--shm-size=256m`. This setting is not necessary for correct operation. See [Configuration](/oem/configuration/) for more information.
 
 Once running, navigate to [http://localhost:9099](http://localhost:9099) which will show the Admin dashboard. This is the same port that the API runs on.
 
@@ -92,6 +95,7 @@ services:
     vector-charts-oem:
         image: 402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.4.1-ba68d44-x86_64
         restart: always
+        shm_size: 256m
         environment:
             LICENSING_ORGANIZATION_ID: "...your organization..."
             LICENSING_SERVER_NAME: "...you organization..."
@@ -102,6 +106,8 @@ services:
 volumes:
     vector-charts-oem-data:
 </pre>
+
+We recommend that you include `shm_size: 256m`. This setting is not necessary for correct operation.
 
 ## More Examples
 
