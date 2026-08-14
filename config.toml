@@ -13,7 +13,6 @@ unsafe = true
     docsUrl = "http://localhost:1313"
     filesUrl = "http://localhost:1313"
 
-# One User Report source tree, published under Cloud and OEM paths.
 [module]
     [[module.mounts]]
         source = "content"
@@ -104,9 +103,6 @@ unsafe = true
         url = "https://symbology-docs.vectorcharts.com/"
         weight = 3
         post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
-
-    # Shared User Report API pages (Cloud + OEM URLs via content symlink).
-    # Identifiers must be unique site-wide or Hugo collapses entries.
     [[menu.main]]
         identifier = "ur_overview_cloud"
         parent = "user_report_api_reference"

@@ -44,5 +44,3 @@ const map = new mapboxgl.Map({
     style: "https://&lt;your-host&gt;:9909/api/v1/styles/base.json?token=&lt;token string&gt;"
 });
 </pre>
-
-User reports are documented in the [User Report API](/oem/user-report-api-reference/).
