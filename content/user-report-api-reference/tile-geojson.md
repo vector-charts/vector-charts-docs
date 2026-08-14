@@ -29,9 +29,7 @@ Response Body:
     ]
 }` %}}
 
-Returns active (non-deleted, non-expired) user reports intersecting the given slippy-map tile as a GeoJSON FeatureCollection. Useful for clients that prefer GeoJSON over MVT.
-
-Each feature includes an `isOwner` flag for the calling token.
+Returns active (non-deleted, non-expired) user reports intersecting the given map tile as a GeoJSON FeatureCollection. Useful for clients that prefer GeoJSON over MVT.
 
 <b>Authentication</b>
 

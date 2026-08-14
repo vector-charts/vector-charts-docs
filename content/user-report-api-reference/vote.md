@@ -31,8 +31,6 @@ Response Body:
 
 Vote that a user report is valid (upvote) or invalid (downvote). Each authenticated user may have at most one vote per report; submitting again updates the existing vote.
 
-Voting is rejected for deleted or expired reports.
-
 <b>Authentication</b>
 
 Requires a Bearer token in the `Authorization` header or a `token` query parameter.
@@ -48,7 +46,7 @@ Requires a Bearer token in the `Authorization` header or a `token` query paramet
 
 <b>Response</b>
 
-Returns the updated [User Report]({{< relref "_index.md" >}}) object with refreshed `upvoteCount` / `downvoteCount`. Individual vote rows are not returned.
+Returns the updated [User Report]({{< relref "_index.md" >}}) object with refreshed `upvoteCount` / `downvoteCount`.
 
 <b>Error Responses</b>
 

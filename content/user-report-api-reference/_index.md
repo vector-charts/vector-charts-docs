@@ -3,8 +3,9 @@ title: "Overview"
 weight: 1
 ---
 
-The User Report API allows your end users to share location-based feedback (for example hazards, accidents, weather, and wildlife). Vector Charts runs
-the infrastructure, allowing you to build rich user-feedback into your application.
+The User Report API allows your end users to share location-based feedback (for example uncharted hazards, accidents, weather, and wildlife). 
+
+Vector Charts runs the infrastructure, allowing you to build rich user-feedback into your application without needing backend infrastructure.
 
 For an example of user reports in action, try out user reports in our [Vector Charts Demo App](https://app.vectorcharts.com/).
 
@@ -30,21 +31,31 @@ const map = new mapboxgl.Map({
 });
 </pre>
 
-When enabled, the style includes a `userReports` vector source pointing at `/api/v1/user-reports/tiles/{z}/{x}/{y}.mvt` and marker layers for each report.
+When enabled, the style will display icons & text indicators for user reports as a map overlay.
 
 ## Querying reports directly
 
-If you prefer not to use the built-in style layers — or need reports outside a map viewport — query the REST and tile endpoints directly:
+If you prefer not to use the built-in style layers, or need reports outside a map viewport, query the REST and tile endpoints directly:
 
 - **[List Reports]({{< relref "list.md" >}})** - paginated JSON feed of all reports
 - **[Get Reports (MVT)]({{< relref "tile-mvt.md" >}})** - Mapbox vector tiles with reports as point features
 - **[Get Reports (GeoJSON)]({{< relref "tile-geojson.md" >}})** - GeoJSON tiles with reports as point features
 
-Deleted and expired reports are omitted from tile responses. List responses exclude them by default unless `includeDeleted` / `includeExpired` are set.
-
 ## Authentication
 
-All user report endpoints require a valid API token, either as:
+All user report endpoints are authenticated similarly to other API endpoints. To authenticate, provide a valid API token, either as a header or query parameter:
 
-- `Authorization: Bearer <token>`, or
-- `?token=<token>` query parameter (useful for map tile and style URLs)
+- `Authorization: Bearer <token>` header
+- `?token=<token>` query parameter
+
+<br/>
+<hr/>
+<br/>
+
+## We Want Your Feedback
+
+User Reports are a new feature. If you need any help, or have suggestions for how to improve the feature, please [Contact us](https://vectorcharts.com/contact-us/).
+
+<br/>
+<hr/>
+<br/>

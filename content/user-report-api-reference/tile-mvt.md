@@ -7,11 +7,9 @@ weight: 6
 Content-Type: application/vnd.mapbox-vector-tile
 (binary Mapbox Vector Tile)` %}}
 
-Returns active (non-deleted, non-expired) user reports intersecting the given slippy-map tile as a Mapbox vector tile (MVT).
+Returns active (non-deleted, non-expired) user reports intersecting the given map tile as a Mapbox vector tile (MVT).
 
 This is the tile URL used by the `userReports` source when `showUserReports=true` is set on the style. Feature properties include report type, vote counts, label, optional description, and `is_owner` for the calling token.
-
-Tiles are cached privately per requesting token (`Cache-Control: private, max-age=60`) because ownership is viewer-specific.
 
 <b>Authentication</b>
 

@@ -43,11 +43,7 @@ Create a new crowdsourced user report at the given position.
 
 <b>Authentication</b>
 
-Requires a Bearer token in the `Authorization` header or a `token` query parameter. On OEM, use a token from your instance's [Admin API](/oem/portal-api-reference/api-tokens/).
-
-<b>Base URL</b>
-
-Cloud: `https://api.vectorcharts.com` — OEM: `https://<your-host>:9909`
+Requires a Bearer token in the `Authorization` header or a `token` query parameter.
 
 <b>Request Body</b>
 
@@ -59,11 +55,11 @@ Cloud: `https://api.vectorcharts.com` — OEM: `https://<your-host>:9909`
 
 <b>Response Schema</b>
 
-Returns the created [User Report]({{< relref "_index.md" >}}) object, including `isOwner: true` for the creating token.
+Returns the created [User Report]({{< relref "_index.md" >}}) object.
 
 <b>Error Responses</b>
 
-- **400 Bad Request**: Missing `reportType` / `position`, invalid coordinates, or invalid `id`.
+- **400 Bad Request**: Missing metadata, invalid coordinates, or invalid `id`.
 - **401 Unauthorized**: Token is missing or invalid.
 - **409 Conflict**: A report with the supplied `id` already exists.
 

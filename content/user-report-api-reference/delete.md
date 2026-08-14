@@ -23,11 +23,11 @@ Response Body:
     "deletedAt": 1718381100000
 }` %}}
 
-Soft-delete a user report. The report remains in the database with `deletedAt` set and is excluded from default list and tile queries.
+Soft-delete a user report. The report is retained in the database, but is excluded from queries by default.
 
 <b>Authentication</b>
 
-Requires a Bearer token. Only the user who created the report or an admin may delete it.
+Requires a Bearer token in the `Authorization` header or a `token` query parameter. Only the user who created the report or an admin may delete it.
 
 <b>Path Parameters</b>
 

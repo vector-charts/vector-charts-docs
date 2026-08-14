@@ -26,6 +26,7 @@ This URL should be used as the base style.
 - **showNoData**: Show an indication where there is no ENC data. Defaults to `true`.
 - **roundOffSoundings**: Round soundings to the nearest (localized) whole number. Defaults to `false`.
 - **showLightSectors**: Toggle the visibility of lighthouse sector visualization. Defaults to `true`.
+- **showUserReports**: Include crowdsourced [user report](/user-report-api-reference/) markers on the chart. Defaults to `false`.
 - **glyphs**: Override the glyphs (fonts) for the style with another URL. Must be a URL-encoded string.
 - **font**: Override the font used for soundings and other textual elements.
 
