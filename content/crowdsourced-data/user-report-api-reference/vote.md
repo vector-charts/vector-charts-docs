@@ -1,13 +1,13 @@
 ---
-title: "Vote on User Report"
-weight: 6
+title: "Vote on Report"
+weight: 3
 menu:
   crowdsourced:
     parent: "user_report_api_reference"
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 ---
 
-{{% apiEndpointCard method="POST" path="/api/v1/user-reports/{id}/votes" title="Vote on User Report" request=`POST https://api.vectorcharts.com/api/v1/user-reports/550e8400-e29b-41d4-a716-446655440000/votes
+{{% apiEndpointCard method="POST" path="/api/v1/user-reports/{id}/votes" title="Vote on Report" request=`POST https://api.vectorcharts.com/api/v1/user-reports/550e8400-e29b-41d4-a716-446655440000/votes
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -22,8 +22,9 @@ Response Body:
     "latitude": 42.36,
     "longitude": -71.05,
     "properties": {},
-    "validVoteCount": 4,
-    "invalidVoteCount": 1,
+    "upvoteCount": 4,
+    "downvoteCount": 1,
+    "isOwner": false,
     "externalUserId": "app-user-abc123",
     "namespace": "public",
     "createdAt": 1718380800000,
@@ -32,7 +33,9 @@ Response Body:
     "deletedAt": null
 }` %}}
 
-Vote that a user report is valid or invalid. Each authenticated user may have at most one vote per report; submitting again updates the existing vote.
+Vote that a user report is valid (upvote) or invalid (downvote). Each authenticated user may have at most one vote per report; submitting again updates the existing vote.
+
+Voting is rejected for deleted or expired reports.
 
 <b>Authentication</b>
 
@@ -44,12 +47,12 @@ Requires a Bearer token in the `Authorization` header or a `token` query paramet
 
 <b>Request Body</b>
 
-- **vote** <span style="color:red;">(Required)</span>: Either `valid` or `invalid`.
+- **vote** <span style="color:red;">(Required)</span>: Either `valid` (upvote) or `invalid` (downvote).
 - **externalUserId** (Optional): Opaque user identifier from your application.
 
 <b>Response</b>
 
-Returns the updated [User Report](/crowdsourced-data/user-report-api-reference/) object with refreshed vote counts. Individual vote rows are not returned.
+Returns the updated [User Report](/crowdsourced-data/user-report-api-reference/) object with refreshed `upvoteCount` / `downvoteCount`. Individual vote rows are not returned.
 
 <b>Error Responses</b>
 

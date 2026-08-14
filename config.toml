@@ -78,11 +78,11 @@ unsafe = true
         parent = "resources"
         title = "Symbol Browser"
         url = "https://symbology-docs.vectorcharts.com/"
-        weight = 2
+        weight = 3
         post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
     [[menu.oem]]
         parent = "resources"
         title = "Symbol Browser"
         url = "https://symbology-docs.vectorcharts.com/"
-        weight = 2
+        weight = 3
         post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"

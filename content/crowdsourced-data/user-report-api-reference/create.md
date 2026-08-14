@@ -1,5 +1,5 @@
 ---
-title: "Create User Report"
+title: "Create Report"
 weight: 2
 menu:
   crowdsourced:
@@ -7,7 +7,7 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 ---
 
-{{% apiEndpointCard method="POST" path="/api/v1/user-reports" title="Create User Report" request=`POST https://api.vectorcharts.com/api/v1/user-reports
+{{% apiEndpointCard method="POST" path="/api/v1/user-reports" title="Create Report" request=`POST https://api.vectorcharts.com/api/v1/user-reports
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -32,8 +32,9 @@ Response Body:
     "properties": {
         "description": "Shallow area reported"
     },
-    "validVoteCount": 0,
-    "invalidVoteCount": 0,
+    "upvoteCount": 0,
+    "downvoteCount": 0,
+    "isOwner": true,
     "externalUserId": "app-user-abc123",
     "namespace": "public",
     "createdAt": 1718380800000,
@@ -50,23 +51,23 @@ Requires a Bearer token in the `Authorization` header or a `token` query paramet
 
 <b>Base URL</b>
 
-Cloud: `https://api.vectorcharts.com` — OEM: `https://&lt;your-host&gt;:9909`
+Cloud: `https://api.vectorcharts.com` — OEM: `https://<your-host>:9909`
 
 <b>Request Body</b>
 
-- **reportType** <span style="color:red;">(Required)</span>: Category string.
-- **position** <span style="color:red;">(Required)</span>: Object with `latitude` and `longitude` (WGS84 decimal degrees).
-- **id** (Optional): Client-supplied UUID version 4. When omitted, the server assigns one. Useful for offline-first clients that pre-generate IDs before sync.
-- **properties** (Optional): Arbitrary JSON metadata (for example, a description or heading).
-- **externalUserId** (Optional): Opaque user identifier from your application. Not used for authorization.
+- **reportType** <span style="color:red;">(Required)</span>: Report category. Supported values: `hazard`, `accident`, `weather`, `wildlife`.
+- **position** <span style="color:red;">(Required)</span>: Object with numeric `latitude` (−90 to 90) and `longitude` (−180 to 180).
+- **properties** (Optional): Free-form JSON. Use `description` for free-text notes shown in clients.
+- **id** (Optional): Client-supplied UUID version 4. If omitted, the server generates one.
+- **externalUserId** (Optional): Opaque user identifier from your application.
 
 <b>Response Schema</b>
 
-Returns a [User Report](/crowdsourced-data/user-report-api-reference/) object with vote counts set to zero.
+Returns the created [User Report](/crowdsourced-data/user-report-api-reference/) object, including `isOwner: true` for the creating token.
 
 <b>Error Responses</b>
 
-- **400 Bad Request**: Invalid `reportType`, position, or `id` is not a valid UUIDv4.
+- **400 Bad Request**: Missing `reportType` / `position`, invalid coordinates, or invalid `id`.
 - **401 Unauthorized**: Token is missing or invalid.
 - **409 Conflict**: A report with the supplied `id` already exists.
 

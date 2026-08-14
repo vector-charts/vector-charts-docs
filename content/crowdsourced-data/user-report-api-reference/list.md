@@ -1,13 +1,13 @@
 ---
-title: "List User Reports"
-weight: 3
+title: "List Reports"
+weight: 5
 menu:
   crowdsourced:
     parent: "user_report_api_reference"
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
-{{% apiEndpointCard method="GET" path="/api/v1/user-reports" title="List User Reports" request=`GET https://api.vectorcharts.com/api/v1/user-reports?limit=50&offset=0
+{{% apiEndpointCard method="GET" path="/api/v1/user-reports" title="List Reports" request=`GET https://api.vectorcharts.com/api/v1/user-reports?limit=50&offset=0
 Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 {
@@ -18,8 +18,9 @@ Response Body:
             "latitude": 42.36,
             "longitude": -71.05,
             "properties": {},
-            "validVoteCount": 3,
-            "invalidVoteCount": 1,
+            "upvoteCount": 3,
+            "downvoteCount": 1,
+            "isOwner": false,
             "externalUserId": "app-user-abc123",
             "namespace": "public",
             "createdAt": 1718380800000,
@@ -33,7 +34,7 @@ Response Body:
     "offset": 0
 }` %}}
 
-List all user reports globally, ordered most recent first. Each report includes aggregated vote counts.
+List user reports globally, ordered most recent first. By default, deleted and expired reports are excluded. Each report includes aggregated vote counts and an `isOwner` flag for the authenticated token.
 
 <b>Authentication</b>
 

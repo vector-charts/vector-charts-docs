@@ -6,11 +6,21 @@ menu:
     title: "Overview"
     parent: "getting_started"
     weight: 1
+  main:
+    parent: "resources"
+    title: "Crowdsourced Data"
+    weight: 2
+    post: "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
+  oem:
+    parent: "resources"
+    title: "Crowdsourced Data"
+    weight: 2
+    post: "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
 ---
 
 Crowdsourced data lets end users contribute location-based observations that other users can discover, validate, and act on. Vector Charts currently supports this through **user reports**: spatially-defined suggestions about chart data submitted at a specific latitude and longitude.
 
-User reports are available on both **Vector Charts Cloud** and **Vector Charts OEM**. The REST API and WebSocket event format are the same on both platforms; only the base URL differs.
+User reports are available on both **Vector Charts Cloud** and **Vector Charts OEM**. The REST API is the same on both platforms; only the base URL differs.
 
 Each deployment is configured with a **namespace** (default `public`). All reports created on that instance belong to its namespace. When replicating between OEM peers, only reports in matching namespaces are exchanged.
 
@@ -25,15 +35,13 @@ All paths in the [User Report API](/crowdsourced-data/user-report-api-reference/
 
 ## What You Can Build
 
-- Let users flag hazards, data quality issues, incidents, closures, or SOS situations on the chart
-- Display nearby reports as GeoJSON tile overlays on a slippy map
+- Let users flag hazards, accidents, weather, and wildlife on the chart
+- Display nearby reports via built-in style layers (`showUserReports=true`) or custom MVT/GeoJSON tile overlays
+- Query reports directly with the list and tile APIs
 - Let users vote reports up or down to surface consensus
-- Receive streaming updates when reports are created, updated, deleted, or expired
 
 ## Next Steps
 
-- [Submitting User Data](/crowdsourced-data/getting-started/submitting-user-data/) — integration patterns for client applications
-- [Streaming Events](/crowdsourced-data/getting-started/streaming-events/) — WebSocket event format
 - [User Report API](/crowdsourced-data/user-report-api-reference/) — endpoint reference
 
 ## Authentication
