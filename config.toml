@@ -13,6 +13,24 @@ unsafe = true
     docsUrl = "http://localhost:1313"
     filesUrl = "http://localhost:1313"
 
+# One User Report source tree, published under Cloud and OEM paths.
+[module]
+    [[module.mounts]]
+        source = "content"
+        target = "content"
+    [[module.mounts]]
+        source = "static"
+        target = "static"
+    [[module.mounts]]
+        source = "layouts"
+        target = "layouts"
+    [[module.mounts]]
+        source = "archetypes"
+        target = "archetypes"
+    [[module.mounts]]
+        source = "content/user-report-api-reference"
+        target = "content/oem/user-report-api-reference"
+
 [menu]
     [[menu.main]]
         identifier = "getting_started"
