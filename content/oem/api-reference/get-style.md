@@ -31,6 +31,7 @@ This endpoint accepts a Bearer token in the `Authorization` header or a `token` 
 - **showPlaceNames** (Optional): Show names of landmarks and built-up areas. Defaults to `true`.
 - **showOverscale** (Optional): Show an indication when the map is zoomed in beyond the source data's resolution. Defaults to `true`.
 - **showNoData** (Optional): Show an indication where there is no ENC data. Defaults to `true`.
+- **showUserReports** (Optional): Include crowdsourced [user report](/oem/user-report-api-reference/) markers on the chart. Defaults to `false`.
 - **showSatellite** (Optional): Render a satellite imagery basemap underneath the chart. Defaults to `false`.
 - **maskLandAreas** (Optional): When `showSatellite` is enabled, removes the basemap's flat land fill so satellite imagery shows through on land outside charted coverage. Defaults to `false`.
 - **satelliteTileUrl** (Optional): Raster tile URL template to use for the satellite basemap instead of the built-in imagery source, e.g. from Mapbox or another provider. Must be a URL-encoded string containing `{z}`, `{x}`, and `{y}` placeholders. Only used when `showSatellite` is `true`.

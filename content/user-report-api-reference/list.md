@@ -1,0 +1,57 @@
+---
+title: "List Reports"
+weight: 5
+---
+
+{{% apiEndpointCard method="GET" path="/api/v1/user-reports" title="List Reports" request=`GET https://api.vectorcharts.com/api/v1/user-reports?limit=50&offset=0
+Authorization: Bearer <token>` response=`Status Code: 200 OK
+Response Body:
+{
+    "reports": [
+        {
+            "id": "550e8400-e29b-41d4-a716-446655440000",
+            "reportType": "hazard",
+            "latitude": 42.36,
+            "longitude": -71.05,
+            "properties": {},
+            "upvoteCount": 3,
+            "downvoteCount": 1,
+            "isOwner": false,
+            "externalUserId": "app-user-abc123",
+            "namespace": "public",
+            "createdAt": 1718380800000,
+            "updatedAt": 1718380900000,
+            "expiredAt": null,
+            "deletedAt": null
+        }
+    ],
+    "total": 1,
+    "limit": 50,
+    "offset": 0
+}` %}}
+
+List user reports globally, ordered most recent first. By default, deleted and expired reports are excluded. Each report includes aggregated vote counts and an `isOwner` flag for the authenticated token.
+
+<b>Authentication</b>
+
+Requires a Bearer token in the `Authorization` header or a `token` query parameter.
+
+<b>Query Parameters</b>
+
+- **limit** (Optional): Maximum number of reports to return. Defaults to `50`. Capped at `200`.
+- **offset** (Optional): Number of reports to skip. Defaults to `0`.
+- **includeDeleted** (Optional): If `true`, include soft-deleted reports. Defaults to `false`.
+- **includeExpired** (Optional): If `true`, include expired reports. Defaults to `false`.
+
+<b>Response Schema</b>
+
+- **reports**: Array of [User Report]({{< relref "_index.md" >}}) objects.
+- **total**: Total number of reports matching the filter.
+- **limit**: Applied page size.
+- **offset**: Applied offset.
+
+<b>Error Responses</b>
+
+- **401 Unauthorized**: Token is missing or invalid.
+
+{{% /apiEndpointCard %}}
