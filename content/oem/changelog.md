@@ -9,11 +9,11 @@ menu:
 
 _History of latest OEM releases._
 
-## Version 0.6.6
-_Released August 6th, 2026_
+## Version 0.6.7
+_Released August 14th, 2026_
 
-- x86_64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.6.6-259a755-x86_64`
-- aarch64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.6.6-259a755-aarch64`
+- x86_64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.6.7-1aa5e37-x86_64`
+- aarch64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.6.7-1aa5e37-aarch64`
 
 Major performance improvements to tile rendering.
 
