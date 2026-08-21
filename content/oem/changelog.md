@@ -9,11 +9,22 @@ menu:
 
 _History of latest OEM releases._
 
-## Version 0.6.6
-_Released August 6th, 2026_
+## Version 0.7.0
+_Released August 17th, 2026_
 
-- x86_64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.6.6-259a755-x86_64`
-- aarch64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.6.6-259a755-aarch64`
+- x86_64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.7.0-36d7149-x86_64`
+- aarch64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.7.0-36d7149-aarch64`
+
+Australia and New Zealand charts are now available in the Vector Charts store.
+
+- Added the Vector Charts store to the Charts page for subscribing to licensed chart regions, including Australia and New Zealand coverage: the full Australian ENC dataset, with Papua New Guinea, Solomon Islands, and New Zealand coverage, sourced from the Australian Hydrographic Office
+- Added a Licenses view on the Charts page to see the status of your data permits
+
+## Version 0.6.7
+_Released August 14th, 2026_
+
+- x86_64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.6.7-1aa5e37-x86_64`
+- aarch64 artifact: `402590802363.dkr.ecr.us-east-2.amazonaws.com/vector-charts-oem:0.6.7-1aa5e37-aarch64`
 
 Major performance improvements to tile rendering.
 
