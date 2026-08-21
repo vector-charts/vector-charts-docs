@@ -21,6 +21,7 @@ This URL should be used as the base style.
 - **depthLimit**: Sets the safety contour value in meters.
 - **depthUnits**: Sets the units for depth soundings: `meters`, `feet`, or `fathoms` are valid.
 - **showEncBoundaries**: Show an outline of the S-57 ENC chart cells. Defaults to `false`.
+- **showMaritimeBoundaries** (Optional): Display non-ENC maritime administrative boundaries. One of `false` (hidden), `lines` (boundary lines and labels), or `full` (lines, labels, and area fills). Defaults to `false`.
 - **showPlaceNames**: Show names of landmarks & built-up areas. Defaults to `true`.
 - **showOverscale**: Show an indication when the map is zoomed in too far. Defaults to `true`.
 - **showNoData**: Show an indication where there is no ENC data. Defaults to `true`.

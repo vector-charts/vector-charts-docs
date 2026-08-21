@@ -28,6 +28,7 @@ This endpoint accepts a Bearer token in the `Authorization` header or a `token` 
 - **roundOffSoundings** (Optional): Round soundings to the nearest whole number. Defaults to `false`.
 - **showLightSectors** (Optional): Draw light sector arcs around lighthouses. Defaults to `true`.
 - **showEncBoundaries** (Optional): Outline the S-57 ENC chart cells. Defaults to `false`.
+- **showMaritimeBoundaries** (Optional): Display non-ENC maritime administrative boundaries. One of `false` (hidden), `lines` (boundary lines and labels), or `full` (lines, labels, and area fills). Defaults to `false`.
 - **showPlaceNames** (Optional): Show names of landmarks and built-up areas. Defaults to `true`.
 - **showOverscale** (Optional): Show an indication when the map is zoomed in beyond the source data's resolution. Defaults to `true`.
 - **showNoData** (Optional): Show an indication where there is no ENC data. Defaults to `true`.
