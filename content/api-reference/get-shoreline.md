@@ -1,6 +1,6 @@
 ---
-title: "Get Shoreline Tile"
-weight: 3.1
+title: "Get Shoreline (GeoJSON)"
+weight: 7
 menu:
   main:
     parent: "api_reference"

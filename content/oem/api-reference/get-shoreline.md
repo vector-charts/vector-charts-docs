@@ -1,6 +1,6 @@
 ---
 title: "Get Shoreline Tile"
-weight: 6
+weight: 7
 menu:
   oem:
     parent: "api_reference"

@@ -1,6 +1,6 @@
 ---
 title: "Get GeoJSON Tile"
-weight: 5
+weight: 6
 menu:
   oem:
     parent: "api_reference"

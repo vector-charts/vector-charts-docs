@@ -1,9 +1,9 @@
 ---
 title: "Get Attributions"
-weight: 4
+weight: 3
 menu:
   main:
-    parent: "api_reference"
+    parent: "chart_api_reference"
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
