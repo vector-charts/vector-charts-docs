@@ -1,13 +1,13 @@
 ---
 title: "Get Raster Tile"
-weight: 4
+weight: 5
 menu:
   oem:
     parent: "api_reference"
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
-{{% apiEndpointCard method="GET" path="/api/v2/tiles/raster-v1/{z}/{x}/{y}.png" title="Get Raster Tile" request=`GET https://<your-host>:9909/api/v2/tiles/raster-v1/12/1240/1515.png
+{{% apiEndpointCard method="GET" path="/api/v2/tiles/enc-raster-v2/{z}/{x}/{y}.png" title="Get Raster Tile" request=`GET https://<your-host>:9909/api/v2/tiles/enc-raster-v2/12/1240/1515.png
 Authorization: Bearer <token>` response=`Status Code: 200 OK
 Content-Type: image/png
 
@@ -15,7 +15,7 @@ Content-Type: image/png
 
 Returns a 256x256 PNG raster tile of the chart at the given XYZ coordinates. The server renders the tile by drawing the same vector data described in [Get Vector Tile](/oem/api-reference/get-mvt/) onto a bitmap with the default day-mode style, then caches the result.
 
-For renderers that consume Mapbox-style raster sources, point them at `/api/v1/styles/raster.json?token=<token string>`. That endpoint returns a minimal style document referencing this tile URL.
+For renderers that consume Mapbox-style raster sources, point them at the [raster style endpoint](/oem/api-reference/get-raster-style/). That endpoint returns a minimal style document referencing this tile URL.
 
 <b>Authentication</b>
 

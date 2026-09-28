@@ -1,6 +1,6 @@
 ---
 title: "Get Attributions"
-weight: 8
+weight: 9
 menu:
   oem:
     parent: "api_reference"

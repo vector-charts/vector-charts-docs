@@ -3,7 +3,7 @@ title: "Get Reports (MVT)"
 weight: 6
 ---
 
-{{% apiEndpointCard method="GET" path="/api/v1/user-reports/tiles/{z}/{x}/{y}.mvt" title="Get Reports (MVT)" request=`GET https://api.vectorcharts.com/api/v1/user-reports/tiles/12/1240/1515.mvt?token=<token>` response=`Status Code: 200 OK
+{{% apiEndpointCard method="GET" path="/api/v1/user-reports/tiles/{z}/{x}/{y}.mvt" title="Get Reports (MVT)" request=`GET https://api.vectorcharts.com/api/v1/user-reports/tiles/12/1240/1515.mvt?token=<token>&includeBathymetry=true` response=`Status Code: 200 OK
 Content-Type: application/vnd.mapbox-vector-tile
 (binary Mapbox Vector Tile)` %}}
 
@@ -20,6 +20,17 @@ Requires a Bearer token in the `Authorization` header or a `token` query paramet
 - **z**: Tile zoom level.
 - **x**: Tile column.
 - **y**: Tile row.
+
+<b>Query Parameters</b>
+
+- **includeBathymetry** (Optional): If `true`, also include bathymetry track line features in the tile. Defaults to `false`.
+
+<b>Layers</b>
+
+- **user_reports**: Point features for user reports.
+- **user_reported_bathymetry** (when `includeBathymetry=true`): LineString segments with a per-segment `depth` value and track properties: `platform_name`, `start_time`, `end_time`, `created_at`, `point_count`, `min_depth`, `max_depth`, `length_m`.
+
+Tiles omit report and bathymetry data below the style min zoom (`z < 11`).
 
 <b>Error Responses</b>
 
