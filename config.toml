@@ -158,6 +158,30 @@ unsafe = true
         url = "/user-report-api-reference/tile-geojson/"
         weight = 7
         pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
+    [[menu.main]]
+        identifier = "ur_create_bathymetry_cloud"
+        parent = "user_report_api_reference"
+        name = "Upload Bathymetry"
+        title = "Upload Bathymetry"
+        url = "/user-report-api-reference/create-bathymetry/"
+        weight = 8
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
+    [[menu.main]]
+        identifier = "ur_list_bathymetry_cloud"
+        parent = "user_report_api_reference"
+        name = "List Bathymetry Tracks"
+        title = "List Bathymetry Tracks"
+        url = "/user-report-api-reference/list-bathymetry/"
+        weight = 9
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
+    [[menu.main]]
+        identifier = "ur_get_bathymetry_cloud"
+        parent = "user_report_api_reference"
+        name = "Get Bathymetry Track"
+        title = "Get Bathymetry Track"
+        url = "/user-report-api-reference/get-bathymetry/"
+        weight = 10
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 
     [[menu.oem]]
         identifier = "ur_overview_oem"
@@ -213,4 +237,28 @@ unsafe = true
         title = "Get Reports (GeoJSON)"
         url = "/oem/user-report-api-reference/tile-geojson/"
         weight = 7
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
+    [[menu.oem]]
+        identifier = "ur_create_bathymetry_oem"
+        parent = "user_report_api_reference"
+        name = "Upload Bathymetry"
+        title = "Upload Bathymetry"
+        url = "/oem/user-report-api-reference/create-bathymetry/"
+        weight = 8
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
+    [[menu.oem]]
+        identifier = "ur_list_bathymetry_oem"
+        parent = "user_report_api_reference"
+        name = "List Bathymetry Tracks"
+        title = "List Bathymetry Tracks"
+        url = "/oem/user-report-api-reference/list-bathymetry/"
+        weight = 9
+        pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
+    [[menu.oem]]
+        identifier = "ur_get_bathymetry_oem"
+        parent = "user_report_api_reference"
+        name = "Get Bathymetry Track"
+        title = "Get Bathymetry Track"
+        url = "/oem/user-report-api-reference/get-bathymetry/"
+        weight = 10
         pre = "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
