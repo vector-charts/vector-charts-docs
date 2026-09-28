@@ -13,7 +13,10 @@ For an example of user reports in action, try out user reports in our [Vector Ch
 
 ## Types of reports
 
-Currently, the User Reports API supports point (latitude/longitude) reports. Each report can be tagged with a category and optional description.
+The User Reports API supports two kinds of data:
+
+- **Point reports**: Latitude/longitude reports tagged with a category and optional description (for example hazards, accidents, weather, and wildlife).
+- **Bathymetry tracks**: Time-series latitude/longitude/depth soundings stored as tracks. When user reports are enabled on the style, tracks are shown as depth-colored lines.
 
 ## Report reputation
 
@@ -31,7 +34,7 @@ const map = new mapboxgl.Map({
 });
 </pre>
 
-When enabled, the style will display icons & text indicators for user reports as a map overlay.
+When enabled, the style includes point report layers (icons and text) and bathymetry track layers (depth-banded line colors). The style requests bathymetry tiles by setting `includeBathymetry=true` on the MVT source.
 
 ## Querying reports directly
 
@@ -40,6 +43,9 @@ If you prefer not to use the built-in style layers, or need reports outside a ma
 - **[List Reports]({{< relref "list.md" >}})** - paginated JSON feed of all reports
 - **[Get Reports (MVT)]({{< relref "tile-mvt.md" >}})** - Mapbox vector tiles with reports as point features
 - **[Get Reports (GeoJSON)]({{< relref "tile-geojson.md" >}})** - GeoJSON tiles with reports as point features
+- **[Upload Bathymetry]({{< relref "create-bathymetry.md" >}})** - upload depth soundings as tracks
+- **[List Bathymetry Tracks]({{< relref "list-bathymetry.md" >}})** - paginated JSON feed of bathymetry track metadata
+- **[Get Bathymetry Track]({{< relref "get-bathymetry.md" >}})** - full track including soundings
 
 ## Authentication
 

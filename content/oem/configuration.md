@@ -39,6 +39,10 @@ The OEM software is configured primarily via environment variables set when runn
 |`POSTGRES_MAX_PARALLEL_WORKERS`|Sets the maximum number of parallel workers for the database.|`2`|`N`|`N`|
 |`POSTGRES_MAX_PARALLEL_MAINTENANCE_WORKERS`|Sets the maximum number of parallel workers for maintenance commands.|`1`|`N`|`N`|
 |`POSTGRES_DYNAMIC_SHARED_MEMORY_TYPE`|Sets the location of shared memory for parallel queries. The value `mmap` does not use Docker `/dev/shm`.|`mmap`|`N`|`N`|
+|`USER_REPORTS_EXPIRATION_AGE_MS`|How long point user reports remain active before expiring, in milliseconds.|`3600000`|`N`|`N`|
+|`USER_REPORTS_BATHYMETRY_TRACK_GAP_MS`|Maximum time gap between consecutive bathymetry soundings before a new track is started, in milliseconds.|`300000`|`N`|`N`|
+|`USER_REPORTS_BATHYMETRY_MAX_SOUNDINGS_PER_REQUEST`|Maximum number of soundings accepted in one bathymetry upload request.|`50000`|`N`|`N`|
+|`USER_REPORTS_BATHYMETRY_MAX_TRACK_BYTES`|Approximate maximum stored size of a single bathymetry track row, in bytes. Larger uploads are split across tracks.|`262144`|`N`|`N`|
 
 ## PostgreSQL Tuning
 
