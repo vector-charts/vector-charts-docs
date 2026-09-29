@@ -49,15 +49,23 @@
 		<div id="contentContainer">
 			<section>
 				<div id="content">
+					{{ if .IsHome }}
+					{{ partial "leftSidebarHome.html" . }}
+					{{ else }}
 					{{ partial "leftSidebar.html" . }}
+					{{ end }}
 					<div id="contentCenter">
 						{{ block "main" . }}{{ end }}
 						<div id="suggestEditButtonMobile" class="suggestEditButton">
 							<hr />
-							<a href="https://github.com/telemetryjet/tjet-documentation/issues/new">Suggest Edits&nbsp;&nbsp;<span class="bp3-icon bp3-icon-annotation"></span></a>
+							<a href="https://github.com/fullhexventures/vector-charts-docs/issues/new">Suggest Edits&nbsp;&nbsp;<span class="bp3-icon bp3-icon-annotation"></span></a>
 						</div>
 					</div>
+					{{ if .IsHome }}
+					{{ partial "rightSidebarHome.html" . }}
+					{{ else }}
 					{{ partial "rightSidebar.html" . }}
+					{{ end }}
 				</div>
 			</section>
 		</div>

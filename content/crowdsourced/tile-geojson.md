@@ -29,7 +29,9 @@ Response Body:
     ]
 }` %}}
 
-Returns active (non-deleted, non-expired) user reports intersecting the given map tile as a GeoJSON FeatureCollection. Useful for clients that prefer GeoJSON over MVT.
+Returns active (non-deleted, non-expired) hazard reports intersecting the given map tile as a GeoJSON FeatureCollection. Useful for clients that prefer GeoJSON over MVT.
+
+This endpoint returns hazard report points only. It does not include bathymetry tracks—use [Get Reports (MVT)](/crowdsourced/tile-mvt/) with `includeBathymetry=true` for tiles that include both hazards and bathymetry.
 
 <b>Authentication</b>
 
