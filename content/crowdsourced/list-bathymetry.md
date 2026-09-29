@@ -1,9 +1,9 @@
 ---
-title: "List Bathymetry Tracks"
+title: "Get Bathymetry Tracks"
 weight: 9
 ---
 
-{{% apiEndpointCard method="GET" path="/api/v1/user-reports/bathymetry" title="List Bathymetry Tracks" request=`GET https://api.vectorcharts.com/api/v1/user-reports/bathymetry?limit=50&offset=0
+{{% apiEndpointCard method="GET" path="/api/v1/user-reports/bathymetry" title="Get Bathymetry Tracks" request=`GET https://api.vectorcharts.com/api/v1/user-reports/bathymetry?limit=50&offset=0
 Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 {

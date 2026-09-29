@@ -371,3 +371,57 @@ th {
     border: 1px solid rgba(0,0,0,0.1);
 
 }
+
+.docsHomeCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+@media screen and (min-width: 800px) {
+    .docsHomeCards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+.docsHomeCard {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    padding: 20px;
+    padding-right: 40px;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.15);
+}
+
+.docsHomeCard--full {
+    grid-column: 1 / -1;
+}
+
+.docsHomeCard:hover,
+.docsHomeCard:active {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px #137CBD;
+}
+
+.docsHomeCardArrow {
+    position: absolute;
+    top: 22px;
+    right: 16px;
+    color: #8A9BA8;
+    opacity: 0.55;
+}
+
+.docsHomeCard h3 {
+    margin-top: 0;
+}
+
+.docsHomeCard p {
+    margin-bottom: 0;
+}

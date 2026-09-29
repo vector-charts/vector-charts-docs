@@ -7,9 +7,9 @@ weight: 6
 Content-Type: application/vnd.mapbox-vector-tile
 (binary Mapbox Vector Tile)` %}}
 
-Returns active (non-deleted, non-expired) user reports intersecting the given map tile as a Mapbox vector tile (MVT).
+Returns active (non-deleted, non-expired) user reports intersecting the given map tile as a Mapbox vector tile (MVT). With `includeBathymetry=true`, the same tile also includes crowdsourced bathymetry track line features.
 
-This is the tile URL used by the `userReports` source when `showUserReports=true` is set on the style. Feature properties include report type, vote counts, label, optional description, and `is_owner` for the calling token.
+This is the tile URL used by the `userReports` source when `showUserReports=true` is set on the style (which requests bathymetry as well). Hazard report feature properties include report type, vote counts, label, optional description, and `is_owner` for the calling token.
 
 <b>Authentication</b>
 
@@ -27,7 +27,7 @@ Requires a Bearer token in the `Authorization` header or a `token` query paramet
 
 <b>Layers</b>
 
-- **user_reports**: Point features for user reports.
+- **user_reports**: Point features for hazard reports.
 - **user_reported_bathymetry** (when `includeBathymetry=true`): LineString segments with a per-segment `depth` value and track properties: `platform_name`, `start_time`, `end_time`, `created_at`, `point_count`, `min_depth`, `max_depth`, `length_m`.
 
 Tiles omit report and bathymetry data below the style min zoom (`z < 11`).
