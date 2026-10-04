@@ -9,7 +9,7 @@ menu:
 
 The Vector Charts API uses tokens to manage authentication and track usage for billing. Each request must have a token associated with it.
 
-Tokens are managed from the [Vector Charts Cloud dashboard](https://cloud.vectorcharts.com/).
+Tokens are managed from the [Vector Charts Cloud dashboard](https://cloud.vectorcharts.com/?referrer=vectorcharts.com).
 
 ## Creating a Token
 

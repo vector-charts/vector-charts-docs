@@ -12,7 +12,7 @@ menu:
 To start creating an account, click the button below, or click the Get Started button anywhere on the Vector Charts homepage. 
 
 <br/>
-<a id="sign-up-button" href="https://cloud.vectorcharts.com/start-register" target="_blank">Start Sign Up</a>
+<a id="sign-up-button" href="https://cloud.vectorcharts.com/start-register?referrer=vectorcharts.com" target="_blank">Start Sign Up</a>
 <br/>
 <br/>
 <br/>
@@ -33,7 +33,7 @@ Next, you'll be prompted to set a password. Choose a secure password, then click
 
 ![email 2](/img/signup2.png)
 
-This completes account creation. You will be redirected to the Vector Charts cloud, which you can login to any time at [https://cloud.vectorcharts.com/](https://cloud.vectorcharts.com/).
+This completes account creation. You will be redirected to the Vector Charts cloud, which you can login to any time at [https://cloud.vectorcharts.com/](https://cloud.vectorcharts.com/?referrer=vectorcharts.com).
 
 ## 3. Setup Billing
 
