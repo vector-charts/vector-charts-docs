@@ -7,7 +7,7 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
-{{% apiEndpointCard method="GET" path="/api/v1/datasets/attributions" title="Get Attributions" request=`GET https://api.vectorcharts.com/api/v1/datasets/attributions`
+{{% apiEndpointCard method="GET" path="/api/v1/datasets/attributions?token=<token string>" title="Get Attributions" request=`GET https://api.vectorcharts.com/api/v1/datasets/attributions?token=299ce9bf4f244300a96f3926240f9c0d`
 response=`Status Code: 200 OK
 Response Body:
 [
@@ -33,9 +33,9 @@ Retrieve attribution & data provenance for the datasets used by the Vector Chart
 
 This can be used in a user interface to display the date that ENC data was loaded for informational purposes.
 
-<b>Query Parameters</b>
+<b>Authentication</b>
 
-N/A. This endpoint does not require authentication.
+This endpoint requires a valid API token. Pass it as a `token` query parameter or an `Authorization: Bearer <token>` header. See [Authentication](/api-reference/api-authentication/).
 
 <b>Response Schema</b>
 

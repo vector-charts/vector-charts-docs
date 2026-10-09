@@ -7,7 +7,8 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
-{{% apiEndpointCard method="GET" path="/api/v1/datasets/attributions" title="Get Attributions" request=`GET https://<your-host>:9909/api/v1/datasets/attributions` response=`Status Code: 200 OK
+{{% apiEndpointCard method="GET" path="/api/v1/datasets/attributions" title="Get Attributions" request=`GET https://<your-host>:9909/api/v1/datasets/attributions
+Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 [
     {
@@ -32,7 +33,7 @@ Returns attribution and provenance metadata for the datasets bundled with the OE
 
 <b>Authentication</b>
 
-This endpoint does not require authentication.
+This endpoint requires a valid API token. Pass it as a `token` query parameter or an `Authorization` header. See [Authentication](/oem/api-reference/) for details.
 
 <b>Response Schema</b>
 

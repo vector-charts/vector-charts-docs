@@ -9,6 +9,10 @@ menu:
 
 _History of updates to the Vector Charts cloud service._
 
+## October 2026
+
+- The datasets attributions endpoint (`GET /api/v1/datasets/attributions`) now requires an API token
+
 ## April 2026
 
 Lighthouse light sectors and public chart updates.
