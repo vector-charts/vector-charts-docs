@@ -31,6 +31,7 @@ This URL should be used as the base style.
 - **roundOffSoundings**: Round soundings to the nearest (localized) whole number. Defaults to `false`.
 - **showLightSectors**: Toggle the visibility of lighthouse sector visualization. Defaults to `true`.
 - **showUserReports**: Include crowdsourced [user report](/crowdsourced/) markers on the chart. Defaults to `false`.
+- **showRasterBathymetry**: Include high-res S-102 bathymetry as a raster layer ([S-102 Bathymetry Gradient](/elevation-api/s102-bathymetry-gradient/)). Defaults to `false`.
 - **glyphs**: Override the glyphs (fonts) for the style with another URL. Must be a URL-encoded string.
 - **font**: Override the font used for soundings and other textual elements.
 

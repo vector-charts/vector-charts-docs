@@ -11,6 +11,7 @@ _History of updates to the Vector Charts cloud service._
 
 ## October 2026
 
+- Documented the Elevation API: point/polyline/polygon lookup endpoints, plus S-102 Bathymetry Gradient, S-102 Bathymetry DEM, and Unified DEM tile endpoints
 - The datasets attributions endpoint (`GET /api/v1/datasets/attributions`) now requires an API token
 
 ## April 2026
