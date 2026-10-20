@@ -11,7 +11,17 @@ _History of updates to the Vector Charts cloud service._
 
 ## October 2026
 
+Tile performance improvements, new in-platform UI to view map coverage and data.
+
+- Added a new map coverage viewer to the Vector Charts UI.
+- Added a new test map viewer to the Vector Charts UI.
+- Added an optional overlay layer for Maritime Boundaries
+- Significant tile rendering performance improvements; in some places >5x faster.
+- Improved color of red buoys and markers
+- Fixed symbology for some buoy top marks
+- Added data license & attribution information into the layers of vector tiles
 - The datasets attributions endpoint (`GET /api/v1/datasets/attributions`) now requires an API token
+- Improved cloud UI layout for small screens
 
 ## April 2026
 
