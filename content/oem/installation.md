@@ -12,6 +12,8 @@ menu:
 - [Docker](http://docker.com/) or another container runtime
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) to authenticate Docker with AWS ECR
 
+After the instance is running, you can manage it with the [Vector Charts CLI](/cli/) (`vc`).
+
 ## Pulling the Docker Image 
 
 We distribute Vector Charts OEM as a private Docker image on AWS ECR.

@@ -402,6 +402,14 @@ th {
     grid-column: 1 / -1;
 }
 
+.docsHomeDivider {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: 8px 0;
+    border: 0;
+    border-top: 1px solid rgba(16, 22, 26, 0.15);
+}
+
 .docsHomeCard:hover,
 .docsHomeCard:active {
     text-decoration: none;

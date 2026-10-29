@@ -39,6 +39,8 @@ Follow the steps in [Creating an Account](/getting-started/creating-account/) to
 
 Follow the steps in [API Tokens](/getting-started/tokens/) to create a token.
 
+You can also manage tokens and uploads from the terminal with the [CLI (`vc`)](/cli/).
+
 ### 3. Add VectorCharts to your App
 
 Use the vector tile URL in your map client:

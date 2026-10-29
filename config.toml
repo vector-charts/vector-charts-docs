@@ -110,6 +110,24 @@ unsafe = true
         url = "https://status.vectorcharts.com/"
         weight = 1
         post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
+    [[menu.cli]]
+        identifier = "getting_started"
+        title = "Getting Started"
+        pre = "<span class='bp3-icon bp3-icon-learning'></span>"
+        weight = 1
+    [[menu.cli]]
+        identifier = "resources"
+        title = "Resources"
+        pre = "<span class='bp3-icon bp3-icon-document'></span>"
+        weight = 2
+    [[menu.cli]]
+        identifier = "status"
+        parent = "resources"
+        name = "Status"
+        title = "Status"
+        url = "https://status.vectorcharts.com/"
+        weight = 1
+        post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
     [[menu.crowdsourced]]
         identifier = "getting_started"
         title = "Getting Started"

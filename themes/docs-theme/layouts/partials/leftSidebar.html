@@ -7,6 +7,9 @@
     {{ if eq $currentPage.Section "oem" }}
         {{ $menu = .Site.Menus.oem }}
         {{ $menuName = "oem" }}
+    {{ else if eq $currentPage.Section "cli" }}
+        {{ $menu = .Site.Menus.cli }}
+        {{ $menuName = "cli" }}
     {{ else if eq $currentPage.Section "crowdsourced" }}
         {{ $menu = .Site.Menus.crowdsourced }}
         {{ $menuName = "crowdsourced" }}

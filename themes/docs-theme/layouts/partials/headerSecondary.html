@@ -5,6 +5,9 @@
     {{ if eq $currentPage.Section "oem" }}
         {{ $menu = .Site.Menus.oem }}
         {{ $menuName = "oem" }}
+    {{ else if eq $currentPage.Section "cli" }}
+        {{ $menu = .Site.Menus.cli }}
+        {{ $menuName = "cli" }}
     {{ else if eq $currentPage.Section "crowdsourced" }}
         {{ $menu = .Site.Menus.crowdsourced }}
         {{ $menuName = "crowdsourced" }}
@@ -15,8 +18,9 @@
             <div class="bp3-select bp3-minimal mobileSidebarNavDropdown">
                 <select onchange="window.location.replace(this.options[this.selectedIndex].value)">
                     <option value="/" {{ if .IsHome }}selected{{end}}>Documentation Home</option>
-                    <option value="/getting-started/" {{ if and (not .IsHome) (ne .Page.Section "oem") (ne .Page.Section "crowdsourced") }}selected{{end}}>Vector Charts Cloud</option>
+                    <option value="/getting-started/" {{ if and (not .IsHome) (ne .Page.Section "oem") (ne .Page.Section "cli") (ne .Page.Section "crowdsourced") }}selected{{end}}>Vector Charts Cloud</option>
                     <option value="/oem/" {{ if eq .Page.Section "oem" }}selected{{end}}>Vector Charts OEM</option>
+                    <option value="/cli/" {{ if eq .Page.Section "cli" }}selected{{end}}>Vector Charts CLI</option>
                     <option value="/crowdsourced/" {{ if eq .Page.Section "crowdsourced" }}selected{{end}}>Crowdsourced Data</option>
                 </select>
             </div>
