@@ -7,14 +7,18 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
-{{% apiEndpointCard method="GET" path="/api/v1/styles/base.json?token=<token string>" title="Get Vector Style" request=`GET https://api.vectorcharts.com/api/v1/styles/base.json?token=299ce9bf4f244300a96f3926240f9c0d&theme=day&depthLimit=10` response=`... style json document ...` %}}
+{{% apiEndpointCard method="GET" path="/api/v1/styles/base.json" title="Get Vector Style" request=`GET https://api.vectorcharts.com/api/v1/styles/base.json?theme=day&depthLimit=10
+Authorization: Bearer <token>` response=`... style json document ...` %}}
 Returns the vector style JSON for use in Mapbox and other map renderers which support vector rendering.
 
 This URL should be used as the base style.
 
+<b>Authentication</b>
+
+This endpoint accepts a Bearer token in the `Authorization` header or a `token` query parameter. See [Authentication](/api-reference/api-authentication/) for details.
+
 <b>Query Parameters</b>
 
-- **token** <span style="color:red;">(Required)</span>: Vector Charts API token.
 - **styleId**: Identifier for a custom style.
 - **styleName**: Identifier for a custom style (Finds the style by name)
 - **theme**: Set to `day`, `dusk` or `night` to change color schemes.

@@ -7,7 +7,8 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
-{{% apiEndpointCard method="GET" path="/api/v2/tiles/data-shoreline-v1/<z>/<x>/<y>.json?token=<token string>" title="Get GeoJSON Tile" request=`GET https://api.vectorcharts.com/api/v2/tiles/data-shoreline-v1/12/1240/1515.json?token=299ce9bf4f244300a96f3926240f9c0d` response=`{
+{{% apiEndpointCard method="GET" path="/api/v2/tiles/data-shoreline-v1/<z>/<x>/<y>.json" title="Get GeoJSON Tile" request=`GET https://api.vectorcharts.com/api/v2/tiles/data-shoreline-v1/12/1240/1515.json
+Authorization: Bearer <token>` response=`{
     "type": "MultiPolygon",
     "coordinates": [
         [
@@ -32,14 +33,14 @@ This data is sourced from all ENCs in the area, along with low-resolution backgr
 
 At zoom levels below 4, the data will exclusively consist of low-resolution background data.
 
+<b>Authentication</b>
+
+This endpoint accepts a Bearer token in the `Authorization` header or a `token` query parameter. See [Authentication](/api-reference/api-authentication/) for details.
+
 <b>Path Parameters</b>
 
 - **z** <span style="color:red;">(Required)</span>: Z coordinate of tile.
 - **x** <span style="color:red;">(Required)</span>: X coordinate of tile.
 - **y** <span style="color:red;">(Required)</span>: Y coordinate of tile. 
-
-<b>Query Parameters</b>
-
-- **token** <span style="color:red;">(Required)</span>: Vector Charts API token.
 
 {{% /apiEndpointCard %}}

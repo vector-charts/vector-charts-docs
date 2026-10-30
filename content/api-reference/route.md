@@ -7,7 +7,8 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-primary\">POST</div>"
 ---
 
-{{% apiEndpointCard method="POST" path="/api/v1/routing/route?token=<token string>" title="Compute Route" request=`POST https://api.vectorcharts.com/api/v1/routing/route?token=299ce9bf4f244300a96f3926240f9c0d
+{{% apiEndpointCard method="POST" path="/api/v1/routing/route" title="Compute Route" request=`POST https://api.vectorcharts.com/api/v1/routing/route
+Authorization: Bearer <token>
 Request Body:
 {
     waypoints: [
@@ -38,15 +39,15 @@ If successful, the endpoint will return a path as an array of latitude & longitu
 
 If the routing fails, the endpoint will return an array of error messages.
 
+<b>Authentication</b>
+
+This endpoint accepts a Bearer token in the `Authorization` header or a `token` query parameter. See [Authentication](/api-reference/api-authentication/) for details.
+
 <b>Request Body</b>
 
 *The request body should be JSON-encoded.*
 
 - **waypoints** <span style="color:red;">(Required)</span>: An array of two or more input waypoints as `[latitude, longitude]` pairs. The algorithm
 will be constrained to route through each of these waypoints sequentially.
-
-<b>Query Parameters</b>
-
-- **token** <span style="color:red;">(Required)</span>: Vector Charts API token.
 
 {{% /apiEndpointCard %}}

@@ -7,7 +7,8 @@ menu:
     pre: "<div class=\"bp3-tag bp3-minimal bp3-intent-success\">GET</div>"
 ---
 
-{{% apiEndpointCard method="GET" path="/api/v1/datasets/attributions?token=<token string>" title="Get Attributions" request=`GET https://api.vectorcharts.com/api/v1/datasets/attributions?token=299ce9bf4f244300a96f3926240f9c0d`
+{{% apiEndpointCard method="GET" path="/api/v1/datasets/attributions" title="Get Attributions" request=`GET https://api.vectorcharts.com/api/v1/datasets/attributions
+Authorization: Bearer <token>`
 response=`Status Code: 200 OK
 Response Body:
 [
@@ -35,7 +36,7 @@ This can be used in a user interface to display the date that ENC data was loade
 
 <b>Authentication</b>
 
-This endpoint requires a valid API token. Pass it as a `token` query parameter or an `Authorization: Bearer <token>` header. See [Authentication](/api-reference/api-authentication/).
+This endpoint accepts a Bearer token in the `Authorization` header or a `token` query parameter. See [Authentication](/api-reference/api-authentication/) for details.
 
 <b>Response Schema</b>
 
