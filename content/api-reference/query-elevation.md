@@ -18,8 +18,9 @@ Look up the elevation along a `LineString` path, using the Vector Charts combine
 
 The returned data will contain a number of samples projected along the line. Each sample contains its `latitude`, `longitude`, and `altitude_msl`.
 
-<b>Query Parameters</b>
-- **token** <span style="color:red;">(Required)</span>: Vector Charts API token.
+<b>Authentication</b>
+
+This endpoint accepts a Bearer token in the `Authorization` header or a `token` query parameter. See [Authentication](/api-reference/api-authentication/) for details.
 
 <b>Request Body</b>
 
