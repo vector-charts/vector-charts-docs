@@ -79,6 +79,14 @@ unsafe = true
         pre = "<span class='bp3-icon bp3-icon-document'></span>"
         weight = 5
     [[menu.main]]
+        identifier = "cli"
+        parent = "resources"
+        name = "CLI"
+        title = "CLI"
+        url = "https://github.com/vector-charts/vector-charts-cli"
+        weight = 2
+        post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
+    [[menu.main]]
         identifier = "symbol_browser"
         parent = "resources"
         name = "Symbol Browser"
@@ -93,6 +101,14 @@ unsafe = true
         title = "Status"
         url = "https://status.vectorcharts.com/"
         weight = 4
+        post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
+    [[menu.oem]]
+        identifier = "cli"
+        parent = "resources"
+        name = "CLI"
+        title = "CLI"
+        url = "https://github.com/vector-charts/vector-charts-cli"
+        weight = 2
         post = "<span class='bp3-icon bp3-icon-share sidebarExternalIcon' aria-hidden='true'></span>"
     [[menu.oem]]
         identifier = "symbol_browser"
