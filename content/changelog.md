@@ -13,6 +13,7 @@ _History of updates to the Vector Charts cloud service._
 
 Tile performance improvements, new in-platform UI to view map coverage and data.
 
+- Documented the Elevation DEM tile endpoint
 - Added a new map coverage viewer to the Vector Charts UI.
 - Added a new test map viewer to the Vector Charts UI.
 - Added an optional overlay layer for Maritime Boundaries

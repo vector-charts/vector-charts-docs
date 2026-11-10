@@ -9,6 +9,10 @@ menu:
 
 _History of latest OEM releases._
 
+## Documentation
+
+- Documented the Elevation DEM tile endpoint
+
 ## Version 0.7.0
 _Released August 17th, 2026_
 
