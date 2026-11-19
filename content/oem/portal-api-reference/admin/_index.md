@@ -11,9 +11,11 @@ The Administration endpoints manage the users, accounts, and API tokens of an en
 
 ## Admin-Only
 
-All Administration endpoints are mounted under the `/api/portal/v1/admin/` path prefix, and every request is checked for administrator privileges in addition to normal authentication. A valid session or API token that belongs to a non-administrator is rejected with a `403 Forbidden` response.
+All Administration endpoints are mounted under the `/api/portal/v1/admin/` path prefix. A personal access token (PAT) is required. A portal session token is also accepted. Tile API tokens (`api_tokens`) are rejected.
 
-The default `admin` user provisioned at first startup is an administrator. See [Authentication](/oem/portal-api-reference/authentication/) for how to obtain a token.
+Every request is also checked for administrator privileges. A PAT or session that belongs to a non-administrator is rejected with `403 Forbidden`.
+
+The default `admin` user provisioned at first startup is an administrator. See [Authentication](/oem/portal-api-reference/authentication/) for session tokens and personal access tokens.
 
 ## Accounts and Users
 
