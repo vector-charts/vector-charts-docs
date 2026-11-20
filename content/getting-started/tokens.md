@@ -59,3 +59,7 @@ open again, and you can change the name and scope.
 To delete a token, use the red trashcan icon in the token list. This will delete the token.
 
 Once a token is deleted, it can no longer be used.
+
+## End User Tokens
+
+An account API token identifies your account. An End User Token identifies one seat on that account, such as a vessel, device, or operator. Chart products that require end users reject an account API token on chart and tile requests. Send the seat's End User Token instead. See [Authentication](/api-reference/api-authentication/) for how to pass the token, and [End Users](/oem/portal-api-reference/end-users/) for the Portal API that creates seats. On Vector Charts Cloud those routes are served at `https://cloud.vectorcharts.com`.

@@ -1,6 +1,6 @@
 ---
 title: "Charts"
-weight: 4
+weight: 5
 menu:
   oem:
     parent: "portal_api_reference"

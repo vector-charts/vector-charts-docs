@@ -14,6 +14,7 @@
 <div class="apiEndpointCardHeading">
 {{ if eq (.Get "method") "GET" }}<div class="bp3-tag bp3-intent-success bp3-minimal">{{ .Get "method" }}</div>{{ end }}
 {{ if eq (.Get "method") "POST" }}<div class="bp3-tag bp3-intent-primary bp3-minimal">{{ .Get "method" }}</div>{{ end }}
+{{ if eq (.Get "method") "PATCH" }}<div class="bp3-tag bp3-intent-warning bp3-minimal">{{ .Get "method" }}</div>{{ end }}
 {{ if eq (.Get "method") "DELETE" }}<div class="bp3-tag bp3-intent-warning bp3-minimal">{{ .Get "method" }}</div>{{ end }}
 <code>{{ .Get "path" }}</code>
 
