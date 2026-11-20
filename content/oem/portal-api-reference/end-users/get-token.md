@@ -15,7 +15,7 @@ Response Body:
     "token": "k7R2nQ8mV4pL0sYc3wHj6tB9uE1aZx5NfDg"
 }` %}}
 
-Return the End User Token for an active seat. A removed seat has no token. On Vector Charts Cloud, send this request to `https://cloud.vectorcharts.com/api/portal/v1/endUsers/{endUserId}/token`. An OEM instance administrator reads a token on another account with [Get Account End User Token](/oem/portal-api-reference/admin/get-end-user-token/).
+Return the End User Token for an active seat. A removed seat has no token. On Vector Charts Cloud, send this request to `https://cloud.vectorcharts.com/api/portal/v1/endUsers/{endUserId}/token`.
 
 <b>Authentication</b>
 

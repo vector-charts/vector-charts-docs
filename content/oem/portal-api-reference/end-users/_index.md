@@ -11,7 +11,7 @@ An end user is a per-seat identity for one vessel, device, or operator that uses
 
 The server assigns `endUserId`, a UUID. A human-readable `label` is required when the seat is created, and it can be changed later. List responses include the seat and its licenses, and omit the token. Read the token with [Get End User Token](/oem/portal-api-reference/end-users/get-token/), or replace it with [Regenerate End User Token](/oem/portal-api-reference/end-users/regenerate-token/).
 
-Each account has one default seat, labeled `Account default`. That seat cannot be removed. Removing any other seat revokes its token.
+Each account has one default seat, labeled `Default`. That seat cannot be removed. Removing any other seat revokes its token.
 
 ## Cloud and OEM
 
@@ -22,7 +22,7 @@ Account-scoped routes are mounted at `/api/portal/v1/endUsers` on both deploymen
 
 The examples below use the OEM host. Send the same path and body to the Cloud host to manage the signed-in account.
 
-An OEM instance administrator manages another account with the same operations under `/api/portal/v1/admin/accounts/{accountId}/endUsers`. Those routes are listed under [Administration](/oem/portal-api-reference/admin/).
+An OEM instance administrator can list, get, create, rename, and remove end users on another account, and can reissue a token, under `/api/portal/v1/admin/accounts/{accountId}/endUsers`. Those routes are listed under [Administration](/oem/portal-api-reference/admin/).
 
 ## Authentication
 

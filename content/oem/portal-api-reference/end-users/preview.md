@@ -30,7 +30,7 @@ Response Body:
     "total": 12000
 }` %}}
 
-Quote the cost of adding one new seat. The body is an empty object, `{}`. Nothing is stored. `lines` lists yearly products that would newly bill. An empty `lines` array means the added seat does not change the bill. On Vector Charts Cloud, send this request to `https://cloud.vectorcharts.com/api/portal/v1/endUsers/preview`. An OEM instance administrator quotes a seat on another account with [Preview Account End User](/oem/portal-api-reference/admin/preview-end-user/).
+Quote the cost of adding one new seat. The body is an empty object, `{}`. Nothing is stored. `lines` lists yearly products that would newly bill. An empty `lines` array means the added seat does not change the bill. On Vector Charts Cloud, send this request to `https://cloud.vectorcharts.com/api/portal/v1/endUsers/preview`.
 
 <b>Authentication</b>
 

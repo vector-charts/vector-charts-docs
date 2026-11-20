@@ -19,7 +19,7 @@ Response Body:
         {
             "endUserId": "7c2e9b14-6a3d-4f1e-9c80-2b5d8e1a4f67",
             "userData": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-            "label": "Account default",
+            "label": "Default",
             "firstSeenAt": 1736942400000,
             "lastSeenAt": 1736946000000,
             "removedAt": null,

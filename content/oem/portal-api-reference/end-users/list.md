@@ -19,7 +19,7 @@ Response Body:
         {
             "endUserId": "7c2e9b14-6a3d-4f1e-9c80-2b5d8e1a4f67",
             "userData": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-            "label": "Account default",
+            "label": "Default",
             "firstSeenAt": 1736942400000,
             "lastSeenAt": 1736946000000,
             "removedAt": null,
@@ -67,7 +67,7 @@ Each entry in `seats` has the following fields. The token is not one of them.
 
 - `endUserId`: Server-generated UUID for the seat.
 - `userData`: The account's global identifier on the default seat. On every other seat, the same value as `endUserId`.
-- `label`: Display name. The default seat is `Account default`. `null` when this instance does not store labels.
+- `label`: Display name. The default seat is `Default`. `null` when this instance does not store labels.
 - `firstSeenAt`: Timestamp of the first chart request from this seat, in milliseconds since unix epoch. `null` if the seat has never been used.
 - `lastSeenAt`: Timestamp of the most recent chart request from this seat, in milliseconds since unix epoch. `null` if the seat has never been used.
 - `removedAt`: Timestamp when the seat was removed, in milliseconds since unix epoch. `null` while the seat is active.

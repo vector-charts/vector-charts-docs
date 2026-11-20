@@ -51,8 +51,6 @@ Deleting a user or an account is asynchronous. The Portal API returns a `jobId` 
 - [List Account End Users](/oem/portal-api-reference/admin/list-end-users/)
 - [Get Account End User](/oem/portal-api-reference/admin/get-end-user/)
 - [Create Account End User](/oem/portal-api-reference/admin/create-end-user/)
-- [Get Account End User Token](/oem/portal-api-reference/admin/get-end-user-token/)
 - [Regenerate Account End User Token](/oem/portal-api-reference/admin/regenerate-end-user-token/)
 - [Update Account End User](/oem/portal-api-reference/admin/update-end-user/)
 - [Remove Account End User](/oem/portal-api-reference/admin/delete-end-user/)
-- [Preview Account End User](/oem/portal-api-reference/admin/preview-end-user/)
