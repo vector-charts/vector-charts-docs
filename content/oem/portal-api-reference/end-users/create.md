@@ -22,15 +22,15 @@ Response Body:
     "token": "k7R2nQ8mV4pL0sYc3wHj6tB9uE1aZx5NfDg"
 }` %}}
 
-Create an end user on the signed-in account. `label` is required. The server generates the UUID `endUserId` and returns a new End User Token. Store the token: list and get responses do not include it. On Vector Charts Cloud, send this request to `https://cloud.vectorcharts.com/api/portal/v1/endUsers`. An OEM instance administrator creates a seat on another account with [Create Account End User](/oem/portal-api-reference/admin/create-end-user/).
+Create an end user on the signed-in account. `label` is required. The server generates the UUID `endUserId` and returns a new End User Token. The seat is created immediately. This route has no confirmation or terms step. That step exists only in the UI. Store the token: list and get responses do not include it. On Vector Charts Cloud, send this request to `https://cloud.vectorcharts.com/api/portal/v1/endUsers`. An OEM instance administrator creates a seat on another account with [Create Account End User](/oem/portal-api-reference/admin/create-end-user/).
 
-Quote the price of one new seat before creating it with [Preview End User](/oem/portal-api-reference/end-users/preview/).
+Quote the price of one new seat with [Preview End User](/oem/portal-api-reference/end-users/preview/).
 
 <b>Authentication</b>
 
 This endpoint requires a Bearer token in the `Authorization` header.
 
-- **Authorization**: `Bearer <token>`. A valid Portal API session token or API token for an account administrator.
+- **Authorization**: `Bearer <token>`. A valid Portal API session token or personal access token for the account. Any role is accepted.
 
 <b>Request Body</b>
 
@@ -50,7 +50,6 @@ The request body should be JSON-encoded.
 
 - **400 Bad Request**: `label` is missing, blank, or longer than 256 characters, or `metadata` is not an object.
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
-- **403 Forbidden**: The authenticated user is not an account administrator.
 - **409 Conflict**: End users are not available on this instance, or this instance cannot store a label or an End User Token yet.
 
 {{% /apiEndpointCard %}}

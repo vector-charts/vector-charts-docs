@@ -21,7 +21,7 @@ Issue a new End User Token for an active seat. The previous token stops working.
 
 This endpoint requires a Bearer token in the `Authorization` header.
 
-- **Authorization**: `Bearer <token>`. A valid Portal API session token or API token for an account administrator.
+- **Authorization**: `Bearer <token>`. A valid Portal API session token or personal access token for the account. Any role is accepted.
 
 <b>Path Parameters</b>
 
@@ -36,7 +36,6 @@ This endpoint requires a Bearer token in the `Authorization` header.
 
 - **400 Bad Request**: `endUserId` is not a UUID.
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
-- **403 Forbidden**: The authenticated user is not an account administrator.
 - **404 Not Found**: No active end user exists with that id on the account.
 - **409 Conflict**: This instance cannot issue End User Tokens yet.
 

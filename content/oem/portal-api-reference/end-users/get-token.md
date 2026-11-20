@@ -15,13 +15,13 @@ Response Body:
     "token": "k7R2nQ8mV4pL0sYc3wHj6tB9uE1aZx5NfDg"
 }` %}}
 
-Return the End User Token for an active seat. This route is limited to account administrators. A removed seat has no token. On Vector Charts Cloud, send this request to `https://cloud.vectorcharts.com/api/portal/v1/endUsers/{endUserId}/token`. An OEM instance administrator reads a token on another account with [Get Account End User Token](/oem/portal-api-reference/admin/get-end-user-token/).
+Return the End User Token for an active seat. A removed seat has no token. On Vector Charts Cloud, send this request to `https://cloud.vectorcharts.com/api/portal/v1/endUsers/{endUserId}/token`. An OEM instance administrator reads a token on another account with [Get Account End User Token](/oem/portal-api-reference/admin/get-end-user-token/).
 
 <b>Authentication</b>
 
 This endpoint requires a Bearer token in the `Authorization` header.
 
-- **Authorization**: `Bearer <token>`. A valid Portal API session token or API token for an account administrator.
+- **Authorization**: `Bearer <token>`. A valid Portal API session token or personal access token for the account. Any role is accepted.
 
 <b>Path Parameters</b>
 
@@ -36,7 +36,6 @@ This endpoint requires a Bearer token in the `Authorization` header.
 
 - **400 Bad Request**: `endUserId` is not a UUID.
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
-- **403 Forbidden**: The authenticated user is not an account administrator.
 - **404 Not Found**: No end user exists with that id on the account.
 - **409 Conflict**: The seat was removed and its token is revoked, or this instance cannot store End User Tokens yet.
 

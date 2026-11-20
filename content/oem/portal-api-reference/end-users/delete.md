@@ -21,7 +21,7 @@ Remove an end user and revoke its End User Token. The seat remains in [List End 
 
 This endpoint requires a Bearer token in the `Authorization` header.
 
-- **Authorization**: `Bearer <token>`. A valid Portal API session token or API token for an account administrator.
+- **Authorization**: `Bearer <token>`. A valid Portal API session token or personal access token for the account. Any role is accepted.
 
 <b>Path Parameters</b>
 
@@ -36,7 +36,6 @@ This endpoint requires a Bearer token in the `Authorization` header.
 
 - **400 Bad Request**: `endUserId` is not a UUID, or the seat is the account default seat.
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
-- **403 Forbidden**: The authenticated user is not an account administrator.
 - **404 Not Found**: No end user exists with that id on the account.
 - **409 Conflict**: End users are not available on this instance, or this instance cannot remove seats yet.
 

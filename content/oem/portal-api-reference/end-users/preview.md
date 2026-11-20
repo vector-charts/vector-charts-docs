@@ -36,7 +36,7 @@ Quote the cost of adding one new seat. The body is an empty object, `{}`. Nothin
 
 This endpoint requires a Bearer token in the `Authorization` header.
 
-- **Authorization**: `Bearer <token>`. A valid Portal API session token or API token for an account administrator.
+- **Authorization**: `Bearer <token>`. A valid Portal API session token or personal access token for the account. Any role is accepted.
 
 <b>Request Body</b>
 
@@ -57,7 +57,6 @@ Send an empty JSON object.
 <b>Error Responses</b>
 
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
-- **403 Forbidden**: The authenticated user is not an account administrator.
 - **404 Not Found**: Seat preview is not available.
 - **502 Bad Gateway**: The chart store could not be reached.
 

@@ -26,7 +26,7 @@ Update the display label of an end user. `endUserId` does not change. On Vector 
 
 This endpoint requires a Bearer token in the `Authorization` header.
 
-- **Authorization**: `Bearer <token>`. A valid Portal API session token or API token for an account administrator.
+- **Authorization**: `Bearer <token>`. A valid Portal API session token or personal access token for the account. Any role is accepted.
 
 <b>Path Parameters</b>
 
@@ -47,7 +47,6 @@ The request body should be JSON-encoded.
 
 - **400 Bad Request**: `endUserId` is not a UUID, or `label` is missing, blank, or longer than 256 characters.
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
-- **403 Forbidden**: The authenticated user is not an account administrator.
 - **404 Not Found**: No end user exists with that id on the account.
 - **409 Conflict**: End users are not available on this instance, or this instance cannot store labels yet.
 

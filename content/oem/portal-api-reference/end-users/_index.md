@@ -26,7 +26,7 @@ An OEM instance administrator manages another account with the same operations u
 
 ## Authentication
 
-Every route requires a Portal API session token or an account API token in the `Authorization` header. Listing and reading a seat is available to any user on the account. Creating a seat, quoting a new seat, reading or regenerating a token, renaming a seat, and removing a seat require an account administrator.
+Every route requires a Portal API session token or a personal access token in the `Authorization` header. Any authenticated member of the account can call these routes, at any role.
 
 An End User Token does not authenticate these routes.
 
