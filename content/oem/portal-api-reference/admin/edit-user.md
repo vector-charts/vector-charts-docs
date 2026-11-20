@@ -30,7 +30,7 @@ Update a user's username and/or password. At least one of `username` or `passwor
 
 This endpoint requires a Bearer token in the `Authorization` header.
 
-- **Authorization**: `Bearer <token>`. A valid Portal API session token or API token belonging to an administrator.
+- **Authorization**: `Bearer <token>`. A personal access token (PAT) belonging to an administrator is required. A portal session token is also accepted. Tile API tokens are not.
 
 <b>Request Body</b>
 
@@ -55,7 +55,7 @@ On success, the endpoint returns the updated user record.
 
 - **400 Bad Request**: The request body is malformed, neither `username` nor `password` was supplied, or the `username` is already in use.
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
-- **403 Forbidden**: The authenticated user is not an administrator.
+- **403 Forbidden**: The caller used a tile API token, or the authenticated user is not an administrator. A personal access token (PAT) is required.
 - **404 Not Found**: No user exists with the given `id`.
 
 {{% /apiEndpointCard %}}

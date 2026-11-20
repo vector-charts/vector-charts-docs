@@ -32,7 +32,7 @@ A user cannot be deleted if any of the following are true:
 
 This endpoint requires a Bearer token in the `Authorization` header.
 
-- **Authorization**: `Bearer <token>`. A valid Portal API session token or API token belonging to an administrator.
+- **Authorization**: `Bearer <token>`. A personal access token (PAT) belonging to an administrator is required. A portal session token is also accepted. Tile API tokens are not.
 
 <b>Request Body</b>
 
@@ -51,7 +51,7 @@ On success, the endpoint returns the identifiers of the deleted user and the cle
 
 - **400 Bad Request**: The request body is malformed, or the user cannot be deleted (self, administrator, or the only user on the account).
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
-- **403 Forbidden**: The authenticated user is not an administrator.
+- **403 Forbidden**: The caller used a tile API token, or the authenticated user is not an administrator. A personal access token (PAT) is required.
 - **404 Not Found**: No user exists with the given `id`.
 
 {{% /apiEndpointCard %}}

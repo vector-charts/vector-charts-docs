@@ -39,7 +39,7 @@ Mint an API token for a specific user on a specific account. This is the adminis
 
 This endpoint requires a Bearer token in the `Authorization` header.
 
-- **Authorization**: `Bearer <token>`. A valid Portal API session token or API token belonging to an administrator.
+- **Authorization**: `Bearer <token>`. A personal access token (PAT) belonging to an administrator is required. A portal session token is also accepted. Tile API tokens are not.
 
 <b>Request Body</b>
 
@@ -64,7 +64,7 @@ On success, the endpoint returns the newly created token record. The shape match
 
 - **400 Bad Request**: The request body is malformed, or the user does not belong to the specified account.
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
-- **403 Forbidden**: The authenticated user is not an administrator.
+- **403 Forbidden**: The caller used a tile API token, or the authenticated user is not an administrator. A personal access token (PAT) is required.
 - **404 Not Found**: No user or account exists with the given identifiers.
 
 {{% /apiEndpointCard %}}

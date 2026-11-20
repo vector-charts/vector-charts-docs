@@ -7,13 +7,13 @@ menu:
     identifier: "portal_api_reference_authentication"
 ---
 
-The Portal API accepts two kinds of bearer tokens, both sent in the `Authorization` header.
+The Portal API accepts bearer tokens in the `Authorization` header.
 
 <pre>
 Authorization: Bearer &lt;token string&gt;
 </pre>
 
-Either token type works on every Portal API endpoint.
+Session tokens and tile API tokens work on Portal API endpoints other than [Administration](/oem/portal-api-reference/admin/). Administration requires a personal access token (PAT). A portal session token is also accepted there. Tile API tokens are rejected.
 
 ## Session Tokens
 
@@ -52,11 +52,27 @@ The response includes a `token` object whose `id` field is the bearer string:
 
 Session tokens remain valid until they are explicitly invalidated via the [logout endpoint](/oem/portal-api-reference/authentication/logout/).
 
+## Personal Access Tokens
+
+A personal access token (PAT) is a long-lived credential for one portal user. [Administration](/oem/portal-api-reference/admin/) requires a PAT. Create one while authenticated with a session token:
+
+<pre>
+POST https://&lt;your-host&gt;:9909/api/portal/v1/personalAccessTokens
+Authorization: Bearer &lt;session token&gt;
+Content-Type: application/json
+
+{
+    "name": "admin-script"
+}
+</pre>
+
+The response `id` is the bearer string.
+
 ## API Tokens
 
 API tokens are long-lived tokens managed through the [API Tokens endpoints](/oem/portal-api-reference/api-tokens/). They are intended for headless integrations and CI/CD systems where storing user credentials is not appropriate.
 
-The same API token can be used to authenticate against both the Portal API and the [Core API](/oem/api-reference/).
+The same API token can be used to authenticate against the [Core API](/oem/api-reference/) and against Portal API endpoints other than Administration.
 
 ## Default Credentials
 
