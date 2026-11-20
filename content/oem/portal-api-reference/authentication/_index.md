@@ -58,6 +58,10 @@ API tokens are long-lived tokens managed through the [API Tokens endpoints](/oem
 
 The same API token can be used to authenticate against both the Portal API and the [Core API](/oem/api-reference/).
 
+## End User Tokens
+
+An End User Token authenticates [Core API](/oem/api-reference/) chart and tile requests for one end user. End users, and the tokens that belong to them, are managed with the [End Users](/oem/portal-api-reference/end-users/) endpoints. Those management calls use a Portal API session token or an account API token. An End User Token is not accepted on the Portal API.
+
 ## Default Credentials
 
 A new OEM instance is provisioned with a default administrator account.

@@ -1,13 +1,13 @@
 ---
 title: "Administration"
-weight: 7
+weight: 8
 menu:
   oem:
     parent: "portal_api_reference"
     identifier: "portal_api_reference_admin"
 ---
 
-The Administration endpoints manage the users, accounts, and API tokens of an entire OEM deployment. The rest of the Portal API operates within the caller's own account; these endpoints operate across every account on the instance.
+The Administration endpoints manage the users, accounts, API tokens, and end users of an entire OEM deployment. The rest of the Portal API operates within the caller's own account; these endpoints operate across every account on the instance.
 
 ## Admin-Only
 
@@ -17,7 +17,7 @@ The default `admin` user provisioned at first startup is an administrator. See [
 
 ## Accounts and Users
 
-An OEM deployment is organized into accounts. Each account owns one or more users and a set of API tokens, and is bound to a chart instance through its `planInstance`. Most administrative tasks follow the same shape: create an account, add users to it, and mint API tokens for those users so their applications can call the Core API.
+An OEM deployment is organized into accounts. Each account owns one or more users, a set of API tokens, and its end users. It is bound to a chart instance through its `planInstance`. Most administrative tasks follow the same shape: create an account, add users to it, and mint API tokens for those users so their applications can call the Core API. Chart products that require an end user use an [End User Token](/oem/portal-api-reference/end-users/) on each seat instead of that account API token.
 
 ## Deletion is Asynchronous
 
@@ -45,3 +45,12 @@ Deleting a user or an account is asynchronous. The Portal API returns a `jobId` 
 
 - [List Account API Tokens](/oem/portal-api-reference/admin/list-api-tokens/)
 - [Create API Token For User](/oem/portal-api-reference/admin/create-api-token/)
+
+### End Users
+
+- [List Account End Users](/oem/portal-api-reference/admin/list-end-users/)
+- [Get Account End User](/oem/portal-api-reference/admin/get-end-user/)
+- [Create Account End User](/oem/portal-api-reference/admin/create-end-user/)
+- [Regenerate Account End User Token](/oem/portal-api-reference/admin/regenerate-end-user-token/)
+- [Update Account End User](/oem/portal-api-reference/admin/update-end-user/)
+- [Remove Account End User](/oem/portal-api-reference/admin/delete-end-user/)
