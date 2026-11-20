@@ -36,7 +36,7 @@ This endpoint requires a Bearer token in the `Authorization` header.
 
 - **400 Bad Request**: `endUserId` is not a UUID.
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
-- **404 Not Found**: No active end user exists with that id on the account.
-- **409 Conflict**: This instance cannot issue End User Tokens yet.
+- **404 Not Found**: No end user exists with that id on the account.
+- **409 Conflict**: End users are not available on this instance, or the end user token is revoked.
 
 {{% /apiEndpointCard %}}

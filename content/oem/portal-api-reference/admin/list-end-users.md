@@ -13,12 +13,9 @@ Response Body:
 {
     "accountZid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
     "available": true,
-    "removable": true,
-    "labelable": true,
     "seats": [
         {
-            "endUserId": "7c2e9b14-6a3d-4f1e-9c80-2b5d8e1a4f67",
-            "userData": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+            "endUserId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
             "label": "Default",
             "firstSeenAt": 1736942400000,
             "lastSeenAt": 1736946000000,
@@ -28,7 +25,7 @@ Response Body:
                 {
                     "productCode": "example-enc",
                     "displayName": "Example ENC",
-                    "paidThrough": "2027-01-15T00:00:00.000Z",
+                    "paidThrough": 1799971200000,
                     "renews": true,
                     "subscriptionStatus": "active"
                 }

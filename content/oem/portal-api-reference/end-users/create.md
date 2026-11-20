@@ -44,7 +44,7 @@ The request body should be JSON-encoded.
 - `endUserId`: Server-generated UUID for the new seat.
 - `label`: The stored label.
 - `created`: `true` when the seat was created.
-- `token`: The End User Token. Send it as `Authorization: Bearer <token>` or the `token` query parameter on chart and tile requests. Present when this instance stores End User Tokens.
+- `token`: The End User Token. The server generates it. Send it as `Authorization: Bearer <token>` or the `token` query parameter on chart and tile requests.
 
 <b>Error Responses</b>
 

@@ -9,9 +9,9 @@ menu:
 
 An end user is a per-seat identity for one vessel, device, or operator that uses chart data through your application. Every end user has its own End User Token. Chart and tile requests send that token in place of an account API token. See [Core API authentication](/oem/api-reference/) and [Cloud authentication](/api-reference/api-authentication/).
 
-The server assigns `endUserId`, a UUID. A human-readable `label` is required when the seat is created, and it can be changed later. List responses include the seat and its licenses, and omit the token. Read the token with [Get End User Token](/oem/portal-api-reference/end-users/get-token/), or replace it with [Regenerate End User Token](/oem/portal-api-reference/end-users/regenerate-token/).
+The server assigns `endUserId`, a UUID, and an End User Token. The caller supplies `label`, which is required, and can change it later. List responses include the seat and its licenses, and omit the token. Read the token with [Get End User Token](/oem/portal-api-reference/end-users/get-token/), or replace it with [Regenerate End User Token](/oem/portal-api-reference/end-users/regenerate-token/).
 
-Each account has one default seat, labeled `Default`. That seat cannot be removed. Removing any other seat revokes its token.
+Each account has one default seat. Its label is `Default`, and its `endUserId` is the account's global id. That seat cannot be removed. Removing any other seat revokes its token.
 
 ## Cloud and OEM
 

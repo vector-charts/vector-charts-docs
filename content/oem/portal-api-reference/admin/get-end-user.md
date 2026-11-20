@@ -12,7 +12,6 @@ Authorization: Bearer <token>` response=`Status Code: 200 OK
 Response Body:
 {
     "endUserId": "3f1a8c20-9b7e-4d62-8a15-6c0e4b2d9f71",
-    "userData": "3f1a8c20-9b7e-4d62-8a15-6c0e4b2d9f71",
     "label": "Harbor Pilot",
     "firstSeenAt": 1736943000000,
     "lastSeenAt": 1736947000000,

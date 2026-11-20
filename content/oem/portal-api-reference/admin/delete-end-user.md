@@ -15,7 +15,7 @@ Response Body:
     "removed": true
 }` %}}
 
-Remove an end user and revoke its End User Token. The account default seat cannot be removed. This is the administrator counterpart to [Remove End User](/oem/portal-api-reference/end-users/delete/).
+Remove an end user and revoke its End User Token. The seat stays on the roster with `removedAt` set. The account default seat cannot be removed. This is the administrator counterpart to [Remove End User](/oem/portal-api-reference/end-users/delete/).
 
 <b>Authentication</b>
 
@@ -39,6 +39,6 @@ This endpoint requires a Bearer token in the `Authorization` header.
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
 - **403 Forbidden**: The authenticated user is not an administrator.
 - **404 Not Found**: No account exists with the given `accountId`, or no end user exists with that id on the account.
-- **409 Conflict**: End users are not available on this instance, or this instance cannot remove seats yet.
+- **409 Conflict**: End users are not available on this instance.
 
 {{% /apiEndpointCard %}}

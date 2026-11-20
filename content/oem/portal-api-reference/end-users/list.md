@@ -13,12 +13,9 @@ Response Body:
 {
     "accountZid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
     "available": true,
-    "removable": true,
-    "labelable": true,
     "seats": [
         {
-            "endUserId": "7c2e9b14-6a3d-4f1e-9c80-2b5d8e1a4f67",
-            "userData": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+            "endUserId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
             "label": "Default",
             "firstSeenAt": 1736942400000,
             "lastSeenAt": 1736946000000,
@@ -28,7 +25,7 @@ Response Body:
                 {
                     "productCode": "example-enc",
                     "displayName": "Example ENC",
-                    "paidThrough": "2027-01-15T00:00:00.000Z",
+                    "paidThrough": 1799971200000,
                     "renews": true,
                     "subscriptionStatus": "active"
                 }
@@ -36,7 +33,6 @@ Response Body:
         },
         {
             "endUserId": "3f1a8c20-9b7e-4d62-8a15-6c0e4b2d9f71",
-            "userData": "3f1a8c20-9b7e-4d62-8a15-6c0e4b2d9f71",
             "label": "Harbor Pilot",
             "firstSeenAt": 1736943000000,
             "lastSeenAt": 1736947000000,
@@ -53,21 +49,24 @@ List the end users registered on the signed-in account. Tokens are omitted. On V
 
 This endpoint requires a Bearer token in the `Authorization` header.
 
-- **Authorization**: `Bearer <token>`. A valid Portal API session token or API token for the account.
+- **Authorization**: `Bearer <token>`. A valid Portal API session token or personal access token for the account. Any role is accepted.
+
+<b>Query Parameters</b>
+
+- **day** (Optional): UTC calendar day, `YYYY-MM-DD`. Omit it to list registered seats. When set, the response lists the end users that made a request on that day.
 
 <b>Response Schema</b>
 
-- `accountZid`: The account's global identifier. `null` when the account has none.
+Without `day`, the response is the account roster.
+
+- `accountZid`: The account's global identifier. `null` when the account has none. The default seat's `endUserId` is this value.
 - `available`: `true` when this instance can store end users. When `false`, `seats` is empty and creating a seat returns `409 Conflict`.
-- `removable`: `true` when seats on this instance can be removed.
-- `labelable`: `true` when seats on this instance store a label.
 - `seats`: The registered end users, including the account default seat and seats that have been removed.
 
 Each entry in `seats` has the following fields. The token is not one of them.
 
 - `endUserId`: Server-generated UUID for the seat.
-- `userData`: The account's global identifier on the default seat. On every other seat, the same value as `endUserId`.
-- `label`: Display name. The default seat is `Default`. `null` when this instance does not store labels.
+- `label`: Display name. The default seat is `Default`.
 - `firstSeenAt`: Timestamp of the first chart request from this seat, in milliseconds since unix epoch. `null` if the seat has never been used.
 - `lastSeenAt`: Timestamp of the most recent chart request from this seat, in milliseconds since unix epoch. `null` if the seat has never been used.
 - `removedAt`: Timestamp when the seat was removed, in milliseconds since unix epoch. `null` while the seat is active.
@@ -75,12 +74,13 @@ Each entry in `seats` has the following fields. The token is not one of them.
 - `licenses`: Product terms for this seat. Empty when no terms are recorded for the account.
     - `productCode`: Product identifier.
     - `displayName`: Product name. Falls back to `productCode` when no display name is recorded.
-    - `paidThrough`: ISO 8601 timestamp through which the product is paid, or `null`.
+    - `paidThrough`: Timestamp through which the product is paid, in milliseconds since unix epoch, or `null`.
     - `renews`: `true` when the product renews.
     - `subscriptionStatus`: Subscription state for the product, or `null`.
 
 <b>Error Responses</b>
 
+- **400 Bad Request**: `day` is not a UTC date in `YYYY-MM-DD` format.
 - **401 Unauthorized**: The `Authorization` header is missing or the token is not valid.
 
 {{% /apiEndpointCard %}}
