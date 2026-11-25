@@ -8,7 +8,7 @@ menu:
     weight: 1
 ---
 
-The Core API serves chart tiles, ENC feature queries, and dataset attributions. It is the runtime surface that client applications call when rendering or querying charts.
+The Core API serves chart tiles, elevation queries, ENC feature queries, and dataset attributions. It is the runtime surface that client applications call when rendering or querying charts. Elevation routes are documented in [Elevation](/oem/api-reference/elevation/).
 
 The Core API is mounted at the root of the OEM server. For an OEM instance running at `https://<your-host>:9909`, the Core API base URL is:
 
@@ -63,3 +63,7 @@ For map clients that load a style URL, include `endUserId` on the [Get Vector St
 <pre>
 https://&lt;your-host&gt;:9909/api/v1/styles/base.json?token=&lt;token string&gt;&amp;endUserId=&lt;your-user-id&gt;
 </pre>
+
+## Elevation
+
+Elevation lookup, altitude conversion, and Terrain-RGB tiles use the same `/api/v2/elevation/` and `/api/v2/tiles/elevation-unified-v1/` paths as Cloud. See [Elevation](/oem/api-reference/elevation/) for the OEM host, authentication, and which datasets have to be loaded or reached over the network.

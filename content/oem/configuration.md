@@ -43,6 +43,7 @@ The OEM software is configured primarily via environment variables set when runn
 |`USER_REPORTS_BATHYMETRY_TRACK_GAP_MS`|Maximum time gap between consecutive bathymetry soundings before a new track is started, in milliseconds.|`300000`|`N`|`N`|
 |`USER_REPORTS_BATHYMETRY_MAX_SOUNDINGS_PER_REQUEST`|Maximum number of soundings accepted in one bathymetry upload request.|`50000`|`N`|`N`|
 |`USER_REPORTS_BATHYMETRY_MAX_TRACK_BYTES`|Approximate maximum stored size of a single bathymetry track row, in bytes. Larger uploads are split across tracks.|`262144`|`N`|`N`|
+|`ELEVATION_CONFIG_PATH`|Replaces the elevation configuration shipped in the image. Leave unset to use that file.|Image default|`N`|`N`|
 
 ## PostgreSQL Tuning
 
@@ -55,3 +56,13 @@ Use a `POSTGRES_*` variable from the table above only when you must set a fixed 
 We recommend that you start the container with `--shm-size=256m`. In Docker Compose, use `shm_size: 256m`.
 
 This setting is not necessary for correct operation. Parallel queries use `mmap` in the data directory by default. The setting only prevents `/dev/shm` from staying at the Docker default of 64MB.
+
+## Elevation
+
+The elevation API is part of the chart server and is proxied on port 9909. The image does not include a terrain or bathymetry grid.
+
+- Seafloor samples come from S-102 charts loaded into the instance.
+- Terrain samples are requested from `https://elevation-tile-api.zydro.net` when a call needs them. The container needs outbound HTTPS to that host.
+- `options.clamp` of `terrain` or `ocean` also calls MapTiler with the server `ENGINE_MAPTILER_KEY`. The default clamp does not.
+
+Set `ELEVATION_CONFIG_PATH` only when replacing the shipped elevation configuration. See [Elevation](/oem/api-reference/elevation/).
